@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kalender Posyandu - Kader Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c3c6d7",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-tertiary-fixed": "#360f00",
+                        "inverse-surface": "#2e3039",
+                        "surface-container-highest": "#e1e2ed",
+                        "tertiary-fixed": "#ffdbcd",
+                        "primary": "#004ac6",
+                        "background": "#faf8ff",
+                        "on-background": "#191b23",
+                        "surface-bright": "#faf8ff",
+                        "inverse-on-surface": "#f0f0fb",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#002113",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-dim": "#d9d9e5",
+                        "on-surface": "#191b23",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#eeefff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-surface-variant": "#434655",
+                        "secondary-container": "#6cf8bb",
+                        "on-secondary-fixed-variant": "#005236",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-container-low": "#f3f3fe",
+                        "secondary": "#006c49",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e1e2ed",
+                        "primary-container": "#2563eb",
+                        "surface-container": "#ededf9",
+                        "surface": "#faf8ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#bc4800",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0053db",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#00714d",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e7e7f3",
+                        "outline": "#737686",
+                        "tertiary": "#943700",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-primary-fixed": "#00174b",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "12px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "headline-lg-mobile": ["Atkinson Hyperlegible Next"],
+                        "headline-lg": ["Atkinson Hyperlegible Next"],
+                        "display-lg": ["Atkinson Hyperlegible Next"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-xs": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "label-xs": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased font-body-md flex h-screen overflow-hidden">
+<!-- TopNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface dark:bg-surface-dim text-primary dark:text-primary-fixed font-body-lg text-body-lg docked full-width top-0 bg-surface-container-low dark:bg-surface-container-lowest shadow-sm flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto fixed z-50">
+<div class="font-display-lg text-headline-lg-mobile text-primary dark:text-primary-fixed font-bold">Posyandu Vinca</div>
+<button class="material-symbols-outlined text-primary hover:opacity-80 active:scale-95 transition-all">menu</button>
+</nav>
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex bg-surface-container-low dark:bg-surface-container-lowest text-primary dark:text-primary-fixed font-label-sm text-label-sm h-screen w-64 fixed left-0 top-0 flex-col h-full py-stack-md border-r border-surface-container-high">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-title-md">
+                K
+            </div>
+<div>
+<h2 class="font-title-md text-title-md text-on-background">Kader Vinca</h2>
+<p class="font-label-xs text-label-xs text-on-surface-variant">Petugas Kesehatan</p>
+</div>
+</div>
+<div class="px-4 mb-6">
+<button class="w-full bg-primary-container text-on-primary font-label-sm text-label-sm py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-98 shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+                Input Data Baru
+            </button>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline mx-2 hover:bg-surface-container-high dark:hover:bg-surface-variant rounded-lg transition-colors active:scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline mx-2 hover:bg-surface-container-high dark:hover:bg-surface-variant rounded-lg transition-colors active:scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">child_care</span>
+                Data Anak
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline mx-2 hover:bg-surface-container-high dark:hover:bg-surface-variant rounded-lg transition-colors active:scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+                Input KMS
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-lg mx-2 active:scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+                Kalender
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline mx-2 hover:bg-surface-container-high dark:hover:bg-surface-variant rounded-lg transition-colors active:scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">assessment</span>
+                Laporan
+            </a>
+</nav>
+<div class="mt-auto px-2 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline mx-2 hover:bg-surface-container-high dark:hover:bg-surface-variant rounded-lg transition-colors active:scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Pengaturan
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-error dark:text-error mx-2 hover:bg-error-container dark:hover:bg-error-container rounded-lg transition-colors active:scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Keluar
+            </a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 bg-background pt-20 md:pt-0 h-screen overflow-y-auto">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md md:py-stack-lg">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-stack-sm mb-stack-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-background mb-1">Kalender Kegiatan</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Kelola jadwal pelayanan dan kegiatan posyandu.</p>
+</div>
+<button class="bg-primary-container text-on-primary font-label-sm text-label-sm py-2 px-4 rounded-lg flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                    Tambah Jadwal Baru
+                </button>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Calendar View -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-stack-md border border-surface-container-highest">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-title-md text-title-md text-on-background">Oktober 2024</h2>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-1 mb-2">
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant py-2">Min</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant py-2">Sen</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant py-2">Sel</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant py-2">Rab</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant py-2">Kam</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant py-2">Jum</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant py-2">Sab</div>
+</div>
+<div class="grid grid-cols-7 gap-1 auto-rows-[80px]">
+<!-- Empty cells for September -->
+<div class="p-2 border border-surface-container-highest rounded-lg bg-surface opacity-50">
+<span class="font-body-md text-body-md text-on-surface-variant">29</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg bg-surface opacity-50">
+<span class="font-body-md text-body-md text-on-surface-variant">30</span>
+</div>
+<!-- October Dates -->
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">1</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">2</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">3</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">4</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">5</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">6</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">7</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">8</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">9</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg bg-primary-fixed hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-primary-fixed-variant font-bold">10</span>
+<div class="absolute bottom-2 left-2 right-2 bg-primary text-on-primary text-[10px] px-1 rounded truncate">Posyandu Rutin</div>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">11</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">12</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">13</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">14</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative border-2 border-primary">
+<span class="font-body-md text-body-md text-primary font-bold">15</span>
+<div class="absolute bottom-2 left-2 right-2 bg-secondary text-on-secondary text-[10px] px-1 rounded truncate">Vit A</div>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">16</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">17</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">18</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">19</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">20</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">21</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">22</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">23</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">24</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg bg-tertiary-fixed hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-tertiary-fixed font-bold">25</span>
+<div class="absolute bottom-2 left-2 right-2 bg-tertiary text-on-tertiary text-[10px] px-1 rounded truncate">Campak</div>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">26</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">27</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">28</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">29</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">30</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg hover:border-primary transition-colors cursor-pointer relative">
+<span class="font-body-md text-body-md text-on-background">31</span>
+</div>
+<!-- Empty cells for November -->
+<div class="p-2 border border-surface-container-highest rounded-lg bg-surface opacity-50">
+<span class="font-body-md text-body-md text-on-surface-variant">1</span>
+</div>
+<div class="p-2 border border-surface-container-highest rounded-lg bg-surface opacity-50">
+<span class="font-body-md text-body-md text-on-surface-variant">2</span>
+</div>
+</div>
+</div>
+<!-- Schedule List -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] border border-surface-container-highest flex flex-col h-full">
+<div class="p-6 border-b border-surface-container-highest">
+<h2 class="font-title-md text-title-md text-on-background mb-4">Daftar Jadwal</h2>
+<div class="flex gap-4 border-b border-outline-variant">
+<button class="pb-2 font-label-sm text-label-sm text-primary border-b-2 border-primary font-bold">Mendatang</button>
+<button class="pb-2 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">Selesai</button>
+</div>
+</div>
+<div class="p-4 flex-1 overflow-y-auto space-y-3">
+<!-- Schedule Item 1 -->
+<div class="bg-surface rounded-lg p-4 border border-surface-container-highest hover:shadow-sm transition-shadow">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">vaccines</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm font-bold text-on-background">Posyandu Rutin &amp; Timbang</h3>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-body-md text-[14px]">10 Okt 2024</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-body-md text-[14px]">08:00 - 11:00 WIB</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="font-body-md text-[14px]">Balai Warga RW 05</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Schedule Item 2 -->
+<div class="bg-surface rounded-lg p-4 border border-surface-container-highest hover:shadow-sm transition-shadow">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined">medication</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm font-bold text-on-background">Pemberian Vitamin A</h3>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-body-md text-[14px]">15 Okt 2024</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-body-md text-[14px]">09:00 - 12:00 WIB</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="font-body-md text-[14px]">Balai Warga RW 05</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Schedule Item 3 -->
+<div class="bg-surface rounded-lg p-4 border border-surface-container-highest hover:shadow-sm transition-shadow">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined">coronavirus</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm font-bold text-on-background">Imunisasi Campak</h3>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-body-md text-[14px]">25 Okt 2024</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-body-md text-[14px]">08:30 - 11:30 WIB</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="font-body-md text-[14px]">Puskesmas Rawabuntu</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-stack-lg border-t border-outline-variant dark:border-outline pt-6 pb-8 flex flex-col items-center justify-center gap-base">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Posyandu Vinca Rawabuntu. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Syarat Layanan</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Bantuan</a>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

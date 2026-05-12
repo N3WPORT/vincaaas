@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Laporan - Posyandu Vinca</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom scrollbar for data tables */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #c3c6d7;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#737686",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d9d9e5",
+                        "tertiary": "#943700",
+                        "surface-container-highest": "#e1e2ed",
+                        "primary": "#004ac6",
+                        "on-tertiary-fixed": "#360f00",
+                        "tertiary-container": "#bc4800",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary-fixed": "#ffdbcd",
+                        "outline-variant": "#c3c6d7",
+                        "inverse-surface": "#2e3039",
+                        "on-secondary-fixed": "#002113",
+                        "background": "#faf8ff",
+                        "inverse-primary": "#b4c5ff",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container-high": "#e7e7f3",
+                        "surface-tint": "#0053db",
+                        "on-secondary-container": "#00714d",
+                        "surface-bright": "#faf8ff",
+                        "on-primary-container": "#eeefff",
+                        "surface": "#faf8ff",
+                        "secondary-container": "#6cf8bb",
+                        "primary-container": "#2563eb",
+                        "primary-fixed": "#dbe1ff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-surface": "#191b23",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#ededf9",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-background": "#191b23",
+                        "secondary": "#006c49",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "inverse-on-surface": "#f0f0fb",
+                        "surface-container-low": "#f3f3fe",
+                        "on-tertiary-container": "#ffede6",
+                        "on-surface-variant": "#434655",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e1e2ed",
+                        "on-primary-fixed": "#00174b",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "48px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "stack-sm": "12px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "stack-md": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "display-lg": ["Atkinson Hyperlegible Next"],
+                        "headline-lg-mobile": ["Atkinson Hyperlegible Next"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-xs": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Atkinson Hyperlegible Next"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-xs": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex font-body-md">
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden lg:flex flex-col h-full p-4 gap-stack-sm h-full w-64 fixed left-0 top-0 bg-surface-container dark:bg-inverse-surface border-r border-outline-variant shadow-md z-40">
+<!-- Brand/Header -->
+<div class="flex items-center gap-3 px-4 py-6 mb-2">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined fill">volunteer_activism</span>
+</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-[20px] leading-tight font-bold text-primary dark:text-primary-fixed-dim">Posyandu Vinca</h1>
+<p class="font-label-sm text-label-xs text-on-surface-variant">Parent Portal</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col gap-1 flex-grow">
+<!-- Data Anak - Inactive -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest rounded-xl transition-all duration-200 scale-95 active:scale-90 font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined">pregnant_woman</span>
+                Kehamilan
+            </a><a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest rounded-xl transition-all duration-200 scale-95 active:scale-90 font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined">child_care</span>
+                Data Anak
+            </a>
+<!-- Laporan - Active -->
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-xl font-bold transition-all duration-200 scale-95 active:scale-90 font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined fill">assessment</span>
+                Laporan
+            </a>
+</div>
+<!-- Footer Links -->
+<div class="flex flex-col gap-1 pt-4 border-t border-outline-variant/30 mt-auto">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest rounded-xl transition-all duration-200 scale-95 active:scale-90 font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container rounded-xl transition-all duration-200 scale-95 active:scale-90 font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</nav>
+<!-- TopNavBar (Mobile) -->
+<header class="lg:hidden flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-surface dark:bg-on-background shadow-sm docked full-width top-0 fixed z-40">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined fill text-[18px]">volunteer_activism</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary-fixed">Posyandu Vinca</h1>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:bg-surface-container-low transition-colors rounded-full p-2 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:bg-surface-container-low transition-colors rounded-full p-2 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full lg:ml-64 pt-[80px] lg:pt-0 pb-[80px] lg:pb-0 min-h-screen bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-10 flex flex-col gap-stack-lg">
+<!-- Page Header & Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-1">Laporan Kesehatan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Pantau perkembangan dan riwayat kesehatan dengan mudah.</p>
+</div>
+<button class="flex items-center justify-center gap-2 px-6 py-3 bg-primary-container text-on-primary rounded-xl font-label-sm text-label-sm hover:opacity-90 transition-opacity shadow-sm active:translate-y-[1px]">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                    Download PDF Report
+                </button>
+</div>
+<!-- Tabs Navigation -->
+<div class="w-full border-b border-outline-variant flex overflow-x-auto custom-scrollbar">
+<button class="px-6 py-4 font-label-sm text-label-sm font-bold text-primary border-b-2 border-primary whitespace-nowrap">
+                    Pertumbuhan Anak
+                </button>
+<button class="px-6 py-4 font-label-sm text-label-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors whitespace-nowrap">
+                    Riwayat Kehamilan
+                </button>
+</div>
+<!-- Tab Content: Pertumbuhan Anak -->
+<div class="flex flex-col gap-stack-lg animate-fade-in">
+<!-- Child Selector & Quick Stats Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Selector Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant flex flex-col gap-4">
+<h3 class="font-title-md text-title-md text-on-surface">Pilih Anak</h3>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container border-1.5 border-outline-variant rounded-lg px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all cursor-pointer">
+<option>Budi Santoso (2 Tahun 3 Bulan)</option>
+<option>Siti Aminah (8 Bulan)</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<div class="flex items-center gap-3 mt-auto pt-4 border-t border-surface-variant">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">face</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Status Gizi Saat Ini</p>
+<p class="font-title-md text-[16px] font-bold text-secondary">Normal</p>
+</div>
+</div>
+</div>
+<!-- Quick Stat: Weight -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 rounded-full bg-inverse-primary/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">monitor_weight</span>
+</div>
+<span class="bg-secondary-container/50 text-on-secondary-container px-2 py-1 rounded text-[12px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +0.4 kg
+                            </span>
+</div>
+<div class="mt-4">
+<p class="font-label-sm text-label-xs text-on-surface-variant mb-1">Berat Badan Terakhir</p>
+<div class="flex items-baseline gap-1">
+<h4 class="font-display-lg text-[32px] text-on-surface">12.4</h4>
+<span class="font-body-md text-on-surface-variant">kg</span>
+</div>
+<p class="font-label-sm text-[11px] text-on-surface-variant mt-1">Pengukuran: 12 Okt 2023</p>
+</div>
+</div>
+<!-- Quick Stat: Height -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">height</span>
+</div>
+<span class="bg-secondary-container/50 text-on-secondary-container px-2 py-1 rounded text-[12px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +1.2 cm
+                            </span>
+</div>
+<div class="mt-4">
+<p class="font-label-sm text-label-xs text-on-surface-variant mb-1">Tinggi Badan Terakhir</p>
+<div class="flex items-baseline gap-1">
+<h4 class="font-display-lg text-[32px] text-on-surface">88.5</h4>
+<span class="font-body-md text-on-surface-variant">cm</span>
+</div>
+<p class="font-label-sm text-[11px] text-on-surface-variant mt-1">Pengukuran: 12 Okt 2023</p>
+</div>
+</div>
+</div>
+<!-- Digital KMS Chart Section -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">KMS Digital (Berat terhadap Umur)</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant mt-1">Standar Pertumbuhan WHO - Anak Laki-laki</p>
+</div>
+<div class="flex gap-2 bg-surface-container rounded-lg p-1">
+<button class="px-4 py-1.5 bg-surface-container-lowest shadow-sm rounded-md font-label-sm text-label-xs text-on-surface">Berat/Umur</button>
+<button class="px-4 py-1.5 rounded-md font-label-sm text-label-xs text-on-surface-variant hover:bg-surface-variant/50 transition-colors">Tinggi/Umur</button>
+</div>
+</div>
+<!-- Chart Placeholder Layout (Simulating a Graph with CSS) -->
+<div class="w-full h-[400px] relative border-l-2 border-b-2 border-outline-variant/30 pl-4 pb-6 mt-4">
+<!-- Y-Axis Labels -->
+<div class="absolute -left-[30px] bottom-[20%] text-[10px] text-on-surface-variant">10kg</div>
+<div class="absolute -left-[30px] bottom-[50%] text-[10px] text-on-surface-variant">15kg</div>
+<div class="absolute -left-[30px] bottom-[80%] text-[10px] text-on-surface-variant">20kg</div>
+<!-- X-Axis Labels -->
+<div class="absolute left-[10%] -bottom-[25px] text-[10px] text-on-surface-variant">6 Bln</div>
+<div class="absolute left-[30%] -bottom-[25px] text-[10px] text-on-surface-variant">12 Bln</div>
+<div class="absolute left-[50%] -bottom-[25px] text-[10px] text-on-surface-variant">18 Bln</div>
+<div class="absolute left-[70%] -bottom-[25px] text-[10px] text-on-surface-variant">24 Bln</div>
+<div class="absolute left-[90%] -bottom-[25px] text-[10px] text-on-surface-variant">30 Bln</div>
+<!-- WHO Standard Bands (Backgrounds) -->
+<div class="absolute inset-0 ml-4 mb-6 overflow-hidden rounded-tr-lg">
+<!-- Upper bound (Overweight warning) -->
+<svg class="absolute w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,70 Q50,40 100,20 L100,0 L0,0 Z" fill="#ffdbcd" opacity="0.3"></path>
+</svg>
+<!-- Normal range (Green band) -->
+<svg class="absolute w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,90 Q50,60 100,40 L100,20 Q50,40 0,70 Z" fill="#6cf8bb" opacity="0.2"></path>
+</svg>
+<!-- Lower bound (Underweight warning) -->
+<svg class="absolute w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,100 L100,100 L100,40 Q50,60 0,90 Z" fill="#ffdbcd" opacity="0.3"></path>
+</svg>
+<!-- Standard Curve Line -->
+<svg class="absolute w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,80 Q50,50 100,30" fill="none" stroke="#00714d" stroke-dasharray="4,4" stroke-width="1"></path>
+</svg>
+<!-- Child's Actual Data Line -->
+<svg class="absolute w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M5,82 L20,70 L35,65 L50,55 L65,48 L80,45" fill="none" stroke="#2563eb" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+<!-- Data Points -->
+<div class="absolute left-[5%] bottom-[18%] w-3 h-3 bg-primary-container rounded-full border-2 border-white shadow-sm transform -translate-x-1/2 translate-y-1/2"></div>
+<div class="absolute left-[20%] bottom-[30%] w-3 h-3 bg-primary-container rounded-full border-2 border-white shadow-sm transform -translate-x-1/2 translate-y-1/2"></div>
+<div class="absolute left-[35%] bottom-[35%] w-3 h-3 bg-primary-container rounded-full border-2 border-white shadow-sm transform -translate-x-1/2 translate-y-1/2"></div>
+<div class="absolute left-[50%] bottom-[45%] w-3 h-3 bg-primary-container rounded-full border-2 border-white shadow-sm transform -translate-x-1/2 translate-y-1/2"></div>
+<div class="absolute left-[65%] bottom-[52%] w-3 h-3 bg-primary-container rounded-full border-2 border-white shadow-sm transform -translate-x-1/2 translate-y-1/2"></div>
+<!-- Active Data Point with Tooltip -->
+<div class="absolute left-[80%] bottom-[55%] w-4 h-4 bg-primary-container rounded-full border-2 border-white shadow-md transform -translate-x-1/2 translate-y-1/2 z-10 cursor-pointer">
+<!-- Tooltip -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max bg-inverse-surface text-background px-3 py-2 rounded shadow-lg pointer-events-none">
+<p class="font-label-sm text-[12px] font-bold">12.4 kg</p>
+<p class="font-label-sm text-[10px] opacity-80">27 Bulan (12 Okt)</p>
+<div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-inverse-surface"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Chart Legend -->
+<div class="flex flex-wrap items-center gap-6 mt-8 pt-4 border-t border-surface-variant justify-center">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-primary-container rounded-full"></div>
+<span class="font-label-sm text-[12px] text-on-surface-variant">Berat Anak</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-1 border-b-2 border-dashed border-secondary"></div>
+<span class="font-label-sm text-[12px] text-on-surface-variant">Median WHO</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-secondary-container rounded-sm opacity-50"></div>
+<span class="font-label-sm text-[12px] text-on-surface-variant">Area Normal</span>
+</div>
+</div>
+</div>
+<!-- Recent Measurements Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant overflow-hidden">
+<div class="px-6 py-4 border-b border-surface-variant flex justify-between items-center">
+<h3 class="font-title-md text-title-md text-on-surface">Riwayat Pengukuran</h3>
+<button class="text-primary font-label-sm text-label-sm font-semibold hover:underline">Lihat Semua</button>
+</div>
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse min-w-[600px]">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-xs text-on-surface-variant">
+<th class="px-6 py-3 font-medium">Tanggal</th>
+<th class="px-6 py-3 font-medium">Umur</th>
+<th class="px-6 py-3 font-medium">Berat (kg)</th>
+<th class="px-6 py-3 font-medium">Tinggi (cm)</th>
+<th class="px-6 py-3 font-medium">Lingkar Kepala</th>
+<th class="px-6 py-3 font-medium">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-[14px]">
+<tr class="border-b border-surface-variant hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 text-on-surface">12 Okt 2023</td>
+<td class="px-6 py-4 text-on-surface-variant">27 Bulan</td>
+<td class="px-6 py-4 font-semibold text-on-surface">12.4</td>
+<td class="px-6 py-4 text-on-surface">88.5</td>
+<td class="px-6 py-4 text-on-surface">48.2 cm</td>
+<td class="px-6 py-4">
+<span class="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-[12px] font-medium">Normal</span>
+</td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 text-on-surface">10 Sep 2023</td>
+<td class="px-6 py-4 text-on-surface-variant">26 Bulan</td>
+<td class="px-6 py-4 font-semibold text-on-surface">12.0</td>
+<td class="px-6 py-4 text-on-surface">87.3</td>
+<td class="px-6 py-4 text-on-surface">48.0 cm</td>
+<td class="px-6 py-4">
+<span class="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-[12px] font-medium">Normal</span>
+</td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 text-on-surface">15 Ags 2023</td>
+<td class="px-6 py-4 text-on-surface-variant">25 Bulan</td>
+<td class="px-6 py-4 font-semibold text-on-surface">11.8</td>
+<td class="px-6 py-4 text-on-surface">86.5</td>
+<td class="px-6 py-4 text-on-surface">47.8 cm</td>
+<td class="px-6 py-4">
+<span class="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-[12px] font-medium">Normal</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface dark:bg-on-background shadow-[0_-4px_20px_rgba(0,0,0,0.04)] rounded-t-xl pb-6"><a class="flex flex-col items-center justify-center text-on-surface-variant active:scale-95 transition-transform hover:bg-surface-container-low rounded-lg p-2" href="#">
+<span class="material-symbols-outlined mb-1">pregnant_woman</span>
+<span class="font-label-xs text-[10px]">Kehamilan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:scale-95 transition-transform hover:bg-surface-container-low rounded-lg p-2" href="#">
+<span class="material-symbols-outlined mb-1">child_care</span>
+<span class="font-label-xs text-[10px]">Data Anak</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-6 py-1 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined fill mb-1">assessment</span>
+<span class="font-label-xs text-[10px] font-bold">Laporan</span>
+</a>
+</nav>
+</body></html>

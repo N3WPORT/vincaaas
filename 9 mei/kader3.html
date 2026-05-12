@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf8ff;
+        }
+        .headline-font {
+            font-family: 'Atkinson Hyperlegible Next', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#dbe1ff",
+                      "tertiary-container": "#bc4800",
+                      "surface": "#faf8ff",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-container": "#ffede6",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-highest": "#e1e2ed",
+                      "inverse-primary": "#b4c5ff",
+                      "tertiary": "#943700",
+                      "surface-dim": "#d9d9e5",
+                      "surface-bright": "#faf8ff",
+                      "surface-tint": "#0053db",
+                      "on-tertiary-fixed": "#360f00",
+                      "surface-container": "#ededf9",
+                      "secondary": "#006c49",
+                      "secondary-fixed": "#6ffbbe",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e1e2ed",
+                      "secondary-fixed-dim": "#4edea3",
+                      "outline-variant": "#c3c6d7",
+                      "outline": "#737686",
+                      "primary-container": "#2563eb",
+                      "surface-container-low": "#f3f3fe",
+                      "on-secondary-container": "#00714d",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "secondary-container": "#6cf8bb",
+                      "on-background": "#191b23",
+                      "tertiary-fixed": "#ffdbcd",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "inverse-on-surface": "#f0f0fb",
+                      "surface-container-high": "#e7e7f3",
+                      "primary": "#004ac6",
+                      "background": "#faf8ff",
+                      "on-surface": "#191b23",
+                      "on-secondary-fixed-variant": "#005236",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-error-container": "#93000a",
+                      "inverse-surface": "#2e3039",
+                      "on-primary-fixed": "#00174b",
+                      "on-primary-container": "#eeefff",
+                      "on-secondary-fixed": "#002113",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "on-surface-variant": "#434655"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "12px",
+                      "stack-md": "24px",
+                      "margin-desktop": "40px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "stack-lg": "48px"
+              },
+              "fontFamily": {
+                      "title-md": ["Inter"],
+                      "label-xs": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Atkinson Hyperlegible Next"],
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Atkinson Hyperlegible Next"],
+                      "display-lg": ["Atkinson Hyperlegible Next"]
+              },
+              "fontSize": {
+                      "title-md": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                      "label-xs": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Desktop Side Navigation (Anchored from JSON) -->
+<nav class="hidden md:flex h-screen w-64 fixed left-0 top-0 flex-col bg-surface-container-low border-r border-outline-variant/20 shadow-md z-50">
+<div class="py-stack-md flex flex-col gap-base">
+<h1 class="font-headline-lg text-headline-lg text-secondary px-gutter mb-6">PosyanduKader</h1>
+<div class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl px-4 py-3 mx-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl px-4 py-3 mx-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">child_care</span>
+<span class="font-label-sm text-label-sm">Data Anak</span>
+</div>
+<div class="flex items-center gap-3 bg-secondary-container text-on-secondary-container rounded-xl px-4 py-3 mx-2 font-bold cursor-pointer">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-label-sm text-label-sm">Input KMS</span>
+</div><div class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl px-4 py-3 mx-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-sm text-label-sm">Kalender</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl px-4 py-3 mx-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">assessment</span>
+<span class="font-label-sm text-label-sm">Laporan</span>
+</div>
+</div>
+<div class="mt-auto pb-stack-md">
+<div class="flex items-center gap-3 text-error hover:bg-error-container/10 rounded-xl px-4 py-3 mx-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-sm text-label-sm">Logout</span>
+</div>
+</div>
+</nav>
+<!-- Top App Bar (Mobile / Web Title) -->
+<header class="md:ml-64 bg-surface/80 backdrop-blur-md sticky top-0 z-40 border-b border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-base flex justify-between items-center h-16 shadow-sm">
+<div class="flex items-center gap-3">
+<span class="md:hidden material-symbols-outlined text-on-surface">menu</span>
+<h2 class="font-title-md text-title-md text-on-surface">Input KMS</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional female health volunteer smiling warmly. She is wearing a clean white clinical uniform against a soft-focus office background, representing a friendly and trustworthy community healthcare provider in a modern healthcare setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2EZyQ0J8Saf5FxACHAPpd8G-k7ohjpSRDsCbWFo3l2xBSsXMDS3kkblsARSu16a2Nzq02aAKDNFriQbv2CgAVSPjwKg2VejBJWAxAjjewKxErTdeMy-j2bkKwWxRUw8cydj7No1EedFiUY5ddvuU01vEe3cJQ-YgjFdKPgrtxD6AkWKhEdHpkN51pkYFsAvP1FHRyfdoUAFJ94110-g8h0Wn2zxvGl5vsaSyTDP0VrsKK11nOEenGpQtBK1G2I4skAnmExWTQ9xVr"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 p-margin-mobile md:p-margin-desktop max-w-container-max mx-auto space-y-stack-lg">
+<!-- Workflow Stepper -->
+<div class="flex justify-between items-center max-w-2xl mx-auto px-4">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</div>
+<span class="font-label-xs text-label-xs text-primary">Identitas</span>
+</div>
+<div class="h-[2px] flex-1 bg-primary-container mx-2 -mt-6"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold ring-4 ring-primary-fixed">2</div>
+<span class="font-label-xs text-label-xs text-primary font-bold">Pengukuran</span>
+</div>
+<div class="h-[2px] flex-1 bg-outline-variant mx-2 -mt-6"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold">3</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Konfirmasi</span>
+</div>
+</div>
+<!-- Main Input Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Patient Context & Entry -->
+<div class="lg:col-span-7 space-y-stack-md">
+<!-- Child Profile Summary Card -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-stack-md flex gap-stack-md items-center border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[32px]">child_care</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Arka Raditya</h3>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full font-label-xs text-label-xs">ID: 20240912-01</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-label-xs text-label-xs">18 Bulan 12 Hari</span>
+</div>
+</div>
+</div>
+<!-- Input Form Group -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-stack-md border border-outline-variant/10">
+<h4 class="font-title-md text-title-md mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">straighten</span>
+                        Input Hasil Pengukuran
+                    </h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-1">Berat Badan (kg)</label>
+<input class="w-full p-3 rounded-lg border-2 border-outline-variant focus:border-primary focus:ring-4 focus:ring-primary-fixed transition-all text-body-lg font-bold outline-none" placeholder="8.5" step="0.1" type="number"/>
+<p class="text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history</span>
+                                Bulan lalu: 8.2 kg
+                            </p>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-1">Tinggi Badan (cm)</label>
+<input class="w-full p-3 rounded-lg border-2 border-outline-variant focus:border-primary focus:ring-4 focus:ring-primary-fixed transition-all text-body-lg font-bold outline-none" placeholder="82.0" step="0.1" type="number"/>
+<p class="text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history</span>
+                                Bulan lalu: 80.5 cm
+                            </p>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-1">Lingkar Kepala (cm)</label>
+<input class="w-full p-3 rounded-lg border-2 border-outline-variant focus:border-primary focus:ring-4 focus:ring-primary-fixed transition-all text-body-lg font-bold outline-none" placeholder="47.2" step="0.1" type="number"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-1">Lingkar Lengan (cm)</label>
+<input class="w-full p-3 rounded-lg border-2 border-outline-variant focus:border-primary focus:ring-4 focus:ring-primary-fixed transition-all text-body-lg font-bold outline-none" placeholder="14.5" step="0.1" type="number"/>
+</div>
+</div>
+<!-- Alert Indicator (Contextual) -->
+<div class="mt-stack-md p-4 bg-error-container/30 border border-error/20 rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-error" data-weight="fill">warning</span>
+<div class="space-y-1">
+<p class="font-label-sm text-label-sm text-on-error-container font-bold">Peringatan Pertumbuhan</p>
+<p class="font-label-xs text-label-xs text-on-error-container opacity-80">Kenaikan berat badan Arka bulan ini (+0.3kg) berada di bawah ambang batas minimum kenaikan (T) 0.5kg.</p>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-title-md text-title-md shadow-lg active:scale-95 transition-transform flex items-center justify-center gap-2">
+                    Simpan &amp; Lanjutkan
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Right Column: Real-time Analysis & Preview -->
+<div class="lg:col-span-5 space-y-stack-md">
+<!-- Z-Score Analysis Card -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-stack-md border border-outline-variant/10">
+<h4 class="font-title-md text-title-md mb-stack-md text-on-surface-variant">Analisis Status Gizi</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center p-3 bg-surface-container-low rounded-lg">
+<div>
+<p class="font-label-xs text-label-xs text-on-surface-variant">BB / Umur</p>
+<p class="font-title-md text-title-md text-secondary">Normal</p>
+</div>
+<span class="text-secondary font-bold font-title-md">-0.5 SD</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-low rounded-lg">
+<div>
+<p class="font-label-xs text-label-xs text-on-surface-variant">TB / Umur</p>
+<p class="font-title-md text-title-md text-secondary">Normal</p>
+</div>
+<span class="text-secondary font-bold font-title-md">+0.2 SD</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-error-container/20 rounded-lg">
+<div>
+<p class="font-label-xs text-label-xs text-on-surface-variant">BB / TB</p>
+<p class="font-title-md text-title-md text-error">Kurang</p>
+</div>
+<span class="text-error font-bold font-title-md">-2.1 SD</span>
+</div>
+</div>
+</div>
+<!-- Growth Chart Preview -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-stack-md border border-outline-variant/10 overflow-hidden">
+<div class="flex justify-between items-center mb-stack-sm">
+<h4 class="font-label-sm text-label-sm font-bold">Preview Kurva KMS</h4>
+<span class="text-[10px] bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">Titik baru terdeteksi</span>
+</div>
+<!-- Simplified Visual Representation of a Growth Chart -->
+<div class="relative h-48 w-full bg-surface-container-lowest rounded-lg border border-outline-variant/20 p-2">
+<!-- Chart Lines (Simulated with Gradients/SVG) -->
+<div class="absolute inset-0 flex flex-col justify-between p-4 opacity-10">
+<div class="border-t border-secondary"></div>
+<div class="border-t border-secondary"></div>
+<div class="border-t border-secondary"></div>
+</div>
+<!-- The Graph Logic Simulation -->
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 100">
+<!-- Background Zones -->
+<path d="M0,80 Q20,70 40,65 T100,50 L100,100 L0,100 Z" fill="#6cf8bb" fill-opacity="0.1"></path>
+<!-- Growth Line -->
+<path d="M10,85 Q25,78 40,70 T65,65" fill="none" stroke="#004ac6" stroke-linecap="round" stroke-width="2"></path>
+<!-- Latest Point Pulse -->
+<circle cx="65" cy="65" fill="#004ac6" r="3">
+<title>Poin Baru</title>
+</circle>
+<circle cx="65" cy="65" fill="#004ac6" fill-opacity="0.2" r="6"></circle>
+</svg>
+<!-- Chart Legends -->
+<div class="absolute bottom-2 right-2 flex gap-2">
+<div class="flex items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-[10px] text-on-surface-variant">Bulan Ini</span>
+</div>
+</div>
+</div>
+<p class="mt-4 font-label-xs text-label-xs text-on-surface-variant text-center leading-relaxed">
+                        Grafik menunjukkan perlambatan pertumbuhan. Disarankan konsultasi dengan tenaga medis terkait asupan gizi.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Navigation (Anchored from JSON) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface/80 backdrop-blur-md border-t border-outline-variant/30 flex justify-around items-center py-3 z-50 shadow-lg">
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">child_care</span>
+<span class="text-[10px]">Data</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<div class="bg-primary-container p-2 rounded-full -mt-8 shadow-md">
+<span class="material-symbols-outlined text-white">edit_note</span>
+</div>
+<span class="text-[10px] font-bold">KMS</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">assessment</span>
+<span class="text-[10px]">Laporan</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px]">Menu</span>
+</div>
+</nav>
+<!-- Success Feedback Overlay (Hidden by Default) -->
+<div class="fixed inset-0 bg-inverse-surface/40 flex items-center justify-center p-gutter z-[100] hidden">
+<div class="bg-white rounded-3xl p-stack-lg text-center max-w-sm w-full space-y-stack-md">
+<div class="w-20 h-20 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[40px]" data-weight="fill">check_circle</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile text-on-surface">Data Tersimpan!</h2>
+<p class="text-on-surface-variant">Laporan pertumbuhan Arka Raditya telah berhasil diunggah ke sistem pusat.</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold">Cetak Bukti KMS</button>
+<button class="w-full text-primary font-bold">Selesai</button>
+</div>
+</div>
+</body></html>

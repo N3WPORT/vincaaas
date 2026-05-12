@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Input Data Anak Baru - Posyandu Vinca</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary-container": "#ffede6",
+                        "on-primary-fixed": "#00174b",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-container-highest": "#e1e2ed",
+                        "inverse-primary": "#b4c5ff",
+                        "secondary": "#006c49",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary-container": "#6cf8bb",
+                        "secondary-fixed-dim": "#4edea3",
+                        "primary": "#004ac6",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-secondary-fixed-variant": "#005236",
+                        "surface-tint": "#0053db",
+                        "inverse-on-surface": "#f0f0fb",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#ededf9",
+                        "on-secondary-container": "#00714d",
+                        "surface-dim": "#d9d9e5",
+                        "primary-container": "#2563eb",
+                        "outline-variant": "#c3c6d7",
+                        "surface-container-high": "#e7e7f3",
+                        "on-secondary-fixed": "#002113",
+                        "tertiary": "#943700",
+                        "on-surface-variant": "#434655",
+                        "tertiary-container": "#bc4800",
+                        "surface": "#faf8ff",
+                        "error-container": "#ffdad6",
+                        "on-background": "#191b23",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191b23",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f3fe",
+                        "surface-variant": "#e1e2ed",
+                        "on-primary-container": "#eeefff",
+                        "background": "#faf8ff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "inverse-surface": "#2e3039",
+                        "on-error-container": "#93000a",
+                        "outline": "#737686"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-md": "24px",
+                        "stack-sm": "12px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-xs": ["Inter"],
+                        "display-lg": ["Atkinson Hyperlegible Next"],
+                        "title-md": ["Inter"],
+                        "headline-lg-mobile": ["Atkinson Hyperlegible Next"],
+                        "headline-lg": ["Atkinson Hyperlegible Next"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-xs": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { color: #004ac6; }
+        .step-inactive { color: #737686; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface-container-low shadow-sm fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-lg text-primary">Posyandu Vinca</div>
+<div class="hidden md:flex gap-gutter items-center"><a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#">Beranda</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#">Layanan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#">Jadwal</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#">Informasi</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#">Kegiatan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#">Tentang Kami</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:opacity-80 active:scale-95 transition-all">Login</button></div>
+</nav>
+</header>
+<!-- SideNavBar (Hidden on small screens) -->
+<aside class="hidden lg:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container-low py-stack-md z-40 pt-24">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">account_circle</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary">Kader Vinca</p>
+<p class="font-label-sm text-label-sm text-outline">Petugas Kesehatan</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant mx-2 hover:bg-surface-container-high rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 bg-secondary-container text-on-secondary-container mx-2 rounded-lg font-bold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">child_care</span>
+<span class="font-label-sm">Data Anak</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant mx-2 hover:bg-surface-container-high rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-label-sm">Input KMS</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant mx-2 hover:bg-surface-container-high rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-sm">Kalender</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant mx-2 hover:bg-surface-container-high rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span class="font-label-sm">Laporan</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-1 border-t border-outline-variant pt-4">
+<a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant mx-2 hover:bg-surface-container-high rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-sm">Pengaturan</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-error mx-2 hover:bg-error-container rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-sm font-bold">Keluar</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="lg:pl-64 pt-24 min-h-screen">
+<div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop py-stack-md">
+<!-- Header Section -->
+<div class="mb-stack-lg">
+<h1 class="font-display-lg text-headline-lg text-on-background">Pendaftaran Data Anak Baru</h1>
+<p class="text-on-surface-variant font-body-md mt-2">Lengkapi formulir berikut untuk mencatat data tumbuh kembang anak di sistem Posyandu Vinca.</p>
+</div>
+<!-- Bento Layout Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Registration Stepper & Form (Left Side) -->
+<div class="lg:col-span-8 space-y-gutter">
+<!-- Stepper -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant">
+<div class="flex justify-between items-center relative">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant -translate-y-1/2 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold ring-4 ring-primary-fixed">1</div>
+<span class="text-label-sm font-bold text-primary">Identitas</span>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold">2</div>
+<span class="text-label-sm font-medium text-outline">Kelahiran</span>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold">3</div>
+<span class="text-label-sm font-medium text-outline">Konfirmasi</span>
+</div>
+</div>
+</div>
+<!-- Main Form Card -->
+<div class="bg-surface-container-lowest rounded-xl p-stack-md shadow-sm border border-outline-variant">
+<form class="space-y-stack-md">
+<!-- Step 1 Content: Identitas Anak (Currently Shown) -->
+<div class="space-y-6" id="step-1">
+<div class="flex items-center gap-2 text-primary border-b border-primary-fixed pb-2">
+<span class="material-symbols-outlined">person</span>
+<h2 class="font-title-md text-title-md">Langkah 1: Identitas Anak</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-on-surface-variant" for="nama_lengkap">Nama Lengkap Anak</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary py-3 px-4" id="nama_lengkap" placeholder="Masukkan nama sesuai Akta" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-on-surface-variant" for="nik_anak">NIK Anak (Opsional)</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary py-3 px-4" id="nik_anak" placeholder="16 digit NIK" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-on-surface-variant" for="tgl_lahir">Tanggal Lahir</label>
+<div class="relative">
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary py-3 px-4 appearance-none" id="tgl_lahir" type="date"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-on-surface-variant">Jenis Kelamin</label>
+<div class="flex gap-4 pt-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline focus:ring-primary" name="jk" type="radio"/>
+<span class="font-body-md group-hover:text-primary transition-colors">Laki-laki</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline focus:ring-primary" name="jk" type="radio"/>
+<span class="font-body-md group-hover:text-primary transition-colors">Perempuan</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Buttons -->
+<div class="flex justify-between pt-8 border-t border-outline-variant">
+<button class="px-8 py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary-fixed transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined">arrow_back</span>
+                                    Kembali
+                                </button>
+<button class="px-10 py-3 rounded-lg bg-primary text-on-primary font-bold shadow-md hover:opacity-90 active:scale-95 transition-all flex items-center gap-2" type="button">
+                                    Lanjutkan
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Side Guidance/Illustration (Right Side) -->
+<div class="lg:col-span-4 space-y-gutter">
+<!-- Welcome Card -->
+<div class="bg-primary-container text-on-primary-container rounded-xl overflow-hidden shadow-md">
+<img class="w-full h-48 object-cover opacity-90" data-alt="A warm, soft-focus photograph of a baby's tiny hand holding a parent's finger, symbolizing care and protection. The lighting is bright and natural, reflecting a clean and modern healthcare environment. The overall aesthetic is gentle, empathetic, and professional, using a bright white and soft blue color palette consistent with a child welfare clinic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmXtnOPSrAKPM37kzhayioyEQlfIJ6B32y7tPefcm442J2qb-I8c7dN0Q4rju-PLCA77l2OV1mErbDfAP7lXstkxzVpWyDT7B60NkJEFKFp86oC5BgZvJ8TYqcoG2ZVjtlV3jYcinjuEYHklDz0pD_0RJ0ZJgyZjC0VcL9X5pwpkgNatONmeSvsyfQk3NjPVnokFyi5Ivjd3E4HU9W6Y8QJdC0Zm7grWZRvCJqLE_YiiqiRobLvhXuNATQbYke0DvQHeCJW-iOFzzg"/>
+<div class="p-6">
+<h3 class="font-title-md text-title-md mb-2">Selamat Datang, Ayah/Ibu!</h3>
+<p class="font-body-md opacity-90 leading-relaxed">Pendaftaran ini membantu kami memantau tumbuh kembang si kecil secara rutin dan tepat sasaran. Pastikan data yang dimasukkan sudah sesuai dengan dokumen resmi.</p>
+</div>
+</div>
+<!-- Tips Card -->
+<div class="bg-secondary-container text-on-secondary-container rounded-xl p-6 border border-secondary">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-secondary-container" data-weight="fill">lightbulb</span>
+<div>
+<h4 class="font-label-sm font-bold mb-1 uppercase tracking-wider">Tips Cepat</h4>
+<ul class="text-sm space-y-2 opacity-90">
+<li class="flex items-center gap-2">• Siapkan buku KIA/KMS</li>
+<li class="flex items-center gap-2">• Periksa kembali NIK anak</li>
+<li class="flex items-center gap-2">• Pastikan satuan berat dalam kg</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Security Badge -->
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant flex items-center gap-4">
+<span class="material-symbols-outlined text-outline text-4xl">verified_user</span>
+<div>
+<p class="font-label-sm text-on-surface-variant font-bold">Data Terenkripsi</p>
+<p class="text-xs text-outline">Semua informasi anak dilindungi dan hanya digunakan untuk keperluan medis Posyandu.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hidden Sections for Review (Concept) -->
+<!-- Note: In a real app, Step 2 and 3 would swap in/out. 
+                 Representing the style for Step 2 and 3 in the same visual language below -->
+<div class="mt-stack-lg border-t-2 border-dashed border-outline-variant pt-stack-lg">
+<p class="text-center font-label-xs text-outline uppercase tracking-widest mb-stack-md">Preview: Tampilan Langkah Lainnya</p>
+<!-- Mock Step 3 Summary View -->
+<div class="max-w-3xl mx-auto glass-card rounded-2xl p-stack-md shadow-xl">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-lg text-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">task_alt</span>
+                            Konfirmasi Data
+                        </h2>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-bold text-xs uppercase">Siap Disimpan</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+<div class="space-y-1">
+<p class="text-xs font-bold text-outline uppercase tracking-tighter">Nama Anak</p>
+<p class="font-title-md text-on-surface">Budi Satria Utama</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold text-outline uppercase tracking-tighter">Jenis Kelamin</p>
+<p class="font-title-md text-on-surface">Laki-laki</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold text-outline uppercase tracking-tighter">Berat Lahir</p>
+<p class="font-title-md text-on-surface">3.2 Kg</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold text-outline uppercase tracking-tighter">Tinggi Lahir</p>
+<p class="font-title-md text-on-surface">50 Cm</p>
+</div>
+<div class="space-y-1 md:col-span-2">
+<p class="text-xs font-bold text-outline uppercase tracking-tighter">Nama Orang Tua</p>
+<p class="font-title-md text-on-surface">Ibu Siti Aminah / Bpk. Heru</p>
+</div>
+</div>
+<div class="mt-8 p-4 bg-primary-fixed text-on-primary-fixed rounded-lg text-sm italic">
+                        "Dengan menyimpan data ini, Anda menyatakan bahwa informasi di atas adalah benar dan dapat dipertanggungjawabkan."
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="lg:pl-64 bg-surface-container-highest border-t border-outline-variant py-stack-lg mt-stack-lg">
+<div class="flex flex-col items-center justify-center gap-base px-margin-desktop w-full">
+<div class="font-display-lg text-title-md text-on-background">Posyandu Vinca Rawabuntu</div>
+<p class="text-on-surface-variant font-body-md">© 2024 Posyandu Vinca Rawabuntu. All rights reserved.</p>
+<div class="flex gap-6 mt-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Kebijakan Privasi</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Syarat Layanan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Bantuan</a>
+</div>
+</div>
+</footer>
+</body></html>

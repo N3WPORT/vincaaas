@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posyandu Vinca Rawa Buntu Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<nav>
+  <div class="nav-brand" onclick="showPage('home')">
+    <div class="nav-logo">🌸</div>
+    <div>
+      <div class="nav-title">Posyandu Vinca</div>
+      <div class="nav-sub">Rawa Buntu Digital</div>
+    </div>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a onclick="scrollToSection('hero')" id="nav-home" class="active-nav">🏠 Beranda</a></li>
+    <li><a onclick="scrollToSection('sec-tentang')" id="nav-tentang">ℹ️ Tentang</a></li>
+    <li><a onclick="showPage('program')" id="nav-program">📋 Program</a></li>
+    <li><a onclick="showPage('kegiatan')" id="nav-kegiatan">🎯 Kegiatan</a></li>
+    <li><a onclick="showPage('berita')" id="nav-berita">📰 Berita</a></li>
+    <li><a onclick="scrollToSection('sec-kontak')" id="nav-kontak">📞 Kontak</a></li>
+    <li><a class="btn-akun" onclick="showPage('akun')" id="nav-akun">👤 Akun</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="scrollToSection('hero');closeMenu()">🏠 Beranda</a>
+  <a onclick="scrollToSection('sec-tentang');closeMenu()">ℹ️ Tentang Kami</a>
+  <a onclick="showPage('program');closeMenu()">📋 Program</a>
+  <a onclick="showPage('kegiatan');closeMenu()">🎯 Kegiatan</a>
+  <a onclick="showPage('berita');closeMenu()">📰 Berita Terkini</a>
+  <a onclick="scrollToSection('sec-kontak');closeMenu()">📞 Kontak Kami</a>
+  <a onclick="showPage('akun');closeMenu()">👤 Akun Saya</a>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  PAGE: BERANDA                          -->
+<!-- ═══════════════════════════════════════ -->
+<div class="page active" id="page-home">
+  <div class="page-wrap">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge"><span class="dot"></span> Platform Posyandu Digital #1 Rawabuntu</div>
+          <h1>Pelayanan Posyandu <span>Lebih Cepat,</span> Lebih Cerdas 🌸</h1>
+          <p>Platform digital terintegrasi untuk memantau tumbuh kembang anak, imunisasi, dan kesehatan ibu di Rawabuntu, Serpong — dari genggaman Anda.</p>
+          <div class="hero-btns">
+            <button class="btn-primary" onclick="showPage('program')">🚀 Lihat Program</button>
+            <button class="btn-secondary" onclick="scrollToSection('sec-tentang')">📖 Tentang Kami</button>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><div class="num">247</div><div class="lbl">Balita Terdaftar</div></div>
+            <div class="hero-stat"><div class="num">38</div><div class="lbl">Ibu Hamil</div></div>
+            <div class="hero-stat"><div class="num">96%</div><div class="lbl">Tingkat Kehadiran</div></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <div class="hero-card-icon" style="background:var(--green-pale)">📊</div>
+              <div><div class="hero-card-title">Tren Kehadiran Posyandu</div><div class="hero-card-sub">April 2025 — 96% hadir</div></div>
+            </div>
+            <div class="mini-chart">
+              <div class="mini-bar" style="height:70%"></div><div class="mini-bar" style="height:65%"></div>
+              <div class="mini-bar" style="height:80%"></div><div class="mini-bar" style="height:88%"></div>
+              <div class="mini-bar" style="height:96%"></div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <div class="hero-card-icon" style="background:var(--peach)">👶</div>
+              <div><div class="hero-card-title">Status Gizi Balita</div><div class="hero-card-sub">247 anak termonitor</div></div>
+            </div>
+            <div class="progress-row">
+              <span class="progress-label">Normal</span>
+              <div class="progress-bar"><div class="progress-fill" style="width:83%"></div></div>
+              <span style="font-size:11px;font-weight:800;color:var(--green-deep)">83%</span>
+            </div>
+            <div class="progress-row">
+              <span class="progress-label">Kurang</span>
+              <div class="progress-bar"><div class="progress-fill" style="width:10%;background:linear-gradient(90deg,#ffc107,#ff9800)"></div></div>
+              <span style="font-size:11px;font-weight:800;color:#a07020">10%</span>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <div class="hero-card-icon" style="background:var(--sky)">💉</div>
+              <div><div class="hero-card-title">Imunisasi Minggu Ini</div><div class="hero-card-sub">Jumat, 2 Mei 2025</div></div>
+            </div>
+            <div class="tag-row">
+              <span class="tag green">BCG (12 anak)</span>
+              <span class="tag orange">DPT-HB (8 anak)</span>
+              <span class="tag blue">Polio (15 anak)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK ACCESS -->
+    <div class="quick-access">
+      <div class="container">
+        <div class="quick-grid">
+          <div class="quick-card" onclick="showPage('akun')"><div class="quick-icon">📊</div><div class="quick-label">Dashboard Kader</div></div>
+          <div class="quick-card" onclick="showPage('akun')"><div class="quick-icon">📋</div><div class="quick-label">E-KMS Digital</div></div>
+          <div class="quick-card" onclick="showToast('📅','Jadwal','Melihat jadwal posyandu...')"><div class="quick-icon">📅</div><div class="quick-label">Jadwal Posyandu</div></div>
+          <div class="quick-card" onclick="showToast('💉','Imunisasi','Mengecek jadwal imunisasi...')"><div class="quick-icon">💉</div><div class="quick-label">Jadwal Imunisasi</div></div>
+          <div class="quick-card" onclick="showToast('💬','Konsultasi','Memulai konsultasi bidan...')"><div class="quick-icon">💬</div><div class="quick-label">Konsultasi Bidan</div></div>
+          <div class="quick-card" onclick="showPage('berita')"><div class="quick-icon">📚</div><div class="quick-label">Edukasi Kesehatan</div></div>
+          <div class="quick-card" onclick="showPage('kegiatan')"><div class="quick-icon">🎯</div><div class="quick-label">Kegiatan Posyandu</div></div>
+          <div class="quick-card" onclick="showPage('akun')"><div class="quick-icon">🏆</div><div class="quick-label">Poin Loyalty</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">🧩 Fitur Lengkap</div>
+          <h2 class="section-title">Semua Kebutuhan Posyandu<br>dalam Satu Platform</h2>
+          <p class="section-sub">Dari pencatatan data hingga monitoring kesehatan, kami hadir untuk memudahkan kader dan memberikan pelayanan terbaik kepada masyarakat.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feat-card"><div class="feat-icon">📋</div><h3>E-KMS Digital</h3><p>Kartu Menuju Sehat digital dengan visualisasi grafik berat badan vs usia, deteksi otomatis indikasi stunting atau gizi buruk.</p><div class="feat-tags"><span class="feat-tag">Grafik BB/U</span><span class="feat-tag">Deteksi Stunting</span><span class="feat-tag">Riwayat</span></div></div>
+          <div class="feat-card"><div class="feat-icon">👩‍👧</div><h3>Portal Orang Tua</h3><p>Akses data anak, jadwal imunisasi & kegiatan, notifikasi pengingat otomatis, dan riwayat kunjungan posyandu dari smartphone.</p><div class="feat-tags"><span class="feat-tag">Data Anak</span><span class="feat-tag">Imunisasi</span><span class="feat-tag">Notifikasi</span></div></div>
+          <div class="feat-card"><div class="feat-icon">📅</div><h3>Sistem Jadwal Posyandu</h3><p>Jadwal posyandu lengkap dan check-in digital saat hadir untuk memudahkan pendataan kehadiran.</p><div class="feat-tags"><span class="feat-tag">Jadwal</span><span class="feat-tag">Check-In</span><span class="feat-tag">Notifikasi</span></div></div>
+          <div class="feat-card"><div class="feat-icon">🔔</div><h3>Notifikasi Otomatis</h3><p>Pengingat imunisasi, jadwal timbang, dan kegiatan posyandu dikirim otomatis via WhatsApp API dan push notification.</p><div class="feat-tags"><span class="feat-tag">WhatsApp API</span><span class="feat-tag">Push Notif</span><span class="feat-tag">Pengingat</span></div></div>
+          <div class="feat-card"><div class="feat-icon">💬</div><h3>Konsultasi Online</h3><p>Chat langsung dengan bidan atau kader kapan saja, FAQ interaktif, dan sistem tanya jawab yang mudah digunakan.</p><div class="feat-tags"><span class="feat-tag">Chat Bidan</span><span class="feat-tag">FAQ</span><span class="feat-tag">Real-time</span></div></div>
+          <div class="feat-card"><div class="feat-icon">👥</div><h3>Multi-Role System</h3><p>Sistem manajemen pengguna dengan role berbeda: Admin, Kader, Bidan, Orang Tua, Ibu Hamil, Ketua RW.</p><div class="feat-tags"><span class="feat-tag">Admin</span><span class="feat-tag">Kader</span><span class="feat-tag">Bidan</span><span class="feat-tag">Ibu Hamil</span></div></div>
+          <div class="feat-card"><div class="feat-icon">📤</div><h3>Export & Laporan</h3><p>Generate laporan ke PDF / Excel dengan format baku untuk dilaporkan ke Puskesmas dan instansi pemerintah terkait.</p><div class="feat-tags"><span class="feat-tag">PDF Export</span><span class="feat-tag">Excel</span><span class="feat-tag">Laporan Bulanan</span></div></div>
+          <div class="feat-card"><div class="feat-icon">📊</div><h3>Panel Kader Digital</h3><p>Input & edit data ibu hamil, bayi, balita, dan lansia. Riwayat pemeriksaan, grafik pertumbuhan, dan manajemen jadwal posyandu.</p><div class="feat-tags"><span class="feat-tag">Input Data</span><span class="feat-tag">Grafik</span><span class="feat-tag">Status Gizi</span><span class="feat-tag">Jadwal</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E-KMS PREVIEW -->
+    <section class="ekms">
+      <div class="container">
+        <div class="ekms-grid">
+          <div class="ekms-card">
+            <div class="ekms-header">
+              <div class="ekms-avatar">👶</div>
+              <div><div class="ekms-name">Muhammad Raffa</div><div class="ekms-meta">Lahir: 15 Jun 2023 · RW 03 RT 08</div><div class="ekms-meta">Orang Tua: Ibu Siti Rahayu</div></div>
+            </div>
+            <div class="kms-chart-wrap">
+              <div class="kms-chart-title">📈 Grafik Berat Badan vs Usia (WHO Standard)</div>
+              <div class="kms-chart">
+                <svg width="100%" height="100%" viewBox="0 0 280 100" preserveAspectRatio="none">
+                  <line x1="0" y1="30" x2="280" y2="25" stroke="rgba(46,184,114,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+                  <line x1="0" y1="50" x2="280" y2="45" stroke="rgba(255,193,7,0.4)" stroke-width="1" stroke-dasharray="4,3"/>
+                  <line x1="0" y1="70" x2="280" y2="68" stroke="rgba(255,140,105,0.4)" stroke-width="1" stroke-dasharray="4,3"/>
+                  <polyline points="20,80 60,70 100,62 140,55 180,48 220,43 260,40" fill="none" stroke="#2eb872" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="20" cy="80" r="4" fill="white" stroke="#2eb872" stroke-width="2"/>
+                  <circle cx="60" cy="70" r="4" fill="white" stroke="#2eb872" stroke-width="2"/>
+                  <circle cx="100" cy="62" r="4" fill="white" stroke="#2eb872" stroke-width="2"/>
+                  <circle cx="140" cy="55" r="4" fill="white" stroke="#2eb872" stroke-width="2"/>
+                  <circle cx="180" cy="48" r="4" fill="white" stroke="#2eb872" stroke-width="2"/>
+                  <circle cx="220" cy="43" r="4" fill="white" stroke="#2eb872" stroke-width="2"/>
+                  <circle cx="260" cy="40" r="4" fill="#2eb872" stroke="#2eb872" stroke-width="2"/>
+                </svg>
+              </div>
+            </div>
+            <div class="kms-status-row">
+              <div class="kms-status"><div class="val">10.2</div><div class="lbl">BB (kg)</div></div>
+              <div class="kms-status"><div class="val">82</div><div class="lbl">TB (cm)</div></div>
+              <div class="kms-status warn"><div class="val">22</div><div class="lbl">Usia (bln)</div></div>
+              <div class="kms-status"><div class="val">Normal</div><div class="lbl">Status</div></div>
+            </div>
+          </div>
+          <div class="ekms-info">
+            <div class="section-badge">📋 E-KMS Digital</div>
+            <h3>Kartu Menuju Sehat Digital untuk Si Kecil</h3>
+            <p>Pantau tumbuh kembang anak secara digital dengan grafik pertumbuhan WHO yang informatif dan deteksi dini masalah gizi secara otomatis.</p>
+            <div class="ekms-points">
+              <div class="ekms-point"><span class="ekms-point-icon">📊</span><span class="ekms-point-text">Grafik berat badan & tinggi badan vs usia berdasarkan standar WHO</span></div>
+              <div class="ekms-point"><span class="ekms-point-icon">🔍</span><span class="ekms-point-text">Deteksi otomatis indikasi stunting, gizi buruk, dan gizi lebih</span></div>
+              <div class="ekms-point"><span class="ekms-point-icon">📝</span><span class="ekms-point-text">Riwayat perkembangan lengkap sejak lahir hingga 5 tahun</span></div>
+              <div class="ekms-point"><span class="ekms-point-icon">💉</span><span class="ekms-point-text">Catatan imunisasi lengkap dengan pengingat otomatis</span></div>
+              <div class="ekms-point"><span class="ekms-point-icon">📤</span><span class="ekms-point-text">Export PDF kartu KMS untuk keperluan administrasi</span></div>
+            </div>
+            <button class="btn-primary" onclick="showPage('akun')">📋 Buka E-KMS Anak Saya</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JADWAL POSYANDU -->
+    <section class="jadwal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">📅 Jadwal</div>
+          <h2 class="section-title">Jadwal Posyandu Vinca</h2>
+          <p class="section-sub">Lihat jadwal kegiatan posyandu bulan ini dan tandai tanggal penting untuk hadir tepat waktu.</p>
+        </div>
+        <div class="jadwal-wrap">
+          <div class="jadwal-calendar">
+            <div class="cal-header">
+              <span class="cal-month">📅 Mei 2025</span>
+              <div class="cal-nav"><button class="cal-btn">‹</button><button class="cal-btn">›</button></div>
+            </div>
+            <div class="cal-days">
+              <div class="cal-day-label">Min</div><div class="cal-day-label">Sen</div><div class="cal-day-label">Sel</div>
+              <div class="cal-day-label">Rab</div><div class="cal-day-label">Kam</div><div class="cal-day-label">Jum</div><div class="cal-day-label">Sab</div>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <div class="jadwal-list">
+            <div class="jadwal-item">
+              <div class="jadwal-icon">🏥</div>
+              <div class="jadwal-info"><div class="jadwal-title">Posyandu Balita — RT 01-04</div><div class="jadwal-date">📅 Kamis, 2 Mei 2025 · 08.00–12.00 WIB</div></div>
+              <span class="jadwal-badge soon">Mendatang</span>
+            </div>
+            <div class="jadwal-item">
+              <div class="jadwal-icon">💉</div>
+              <div class="jadwal-info"><div class="jadwal-title">Imunisasi Rutin BCG & DPT</div><div class="jadwal-date">📅 Jumat, 2 Mei 2025 · 09.00–11.00 WIB</div></div>
+              <span class="jadwal-badge soon">Mendatang</span>
+            </div>
+            <div class="jadwal-item">
+              <div class="jadwal-icon">🤰</div>
+              <div class="jadwal-info"><div class="jadwal-title">Kelas Ibu Hamil</div><div class="jadwal-date">📅 Rabu, 8 Mei 2025 · 09.00–11.00 WIB</div></div>
+              <span class="jadwal-badge open">Daftar Sekarang</span>
+            </div>
+            <div class="jadwal-item">
+              <div class="jadwal-icon">🧓</div>
+              <div class="jadwal-info"><div class="jadwal-title">Posyandu Lansia & Cek Kesehatan</div><div class="jadwal-date">📅 Rabu, 15 Mei 2025 · 07.30–10.30 WIB</div></div>
+              <span class="jadwal-badge soon">Mendatang</span>
+            </div>
+            <div class="jadwal-item">
+              <div class="jadwal-icon">📚</div>
+              <div class="jadwal-info"><div class="jadwal-title">Seminar Pencegahan Stunting</div><div class="jadwal-date">📅 Kamis, 8 Mei 2025 · 09.00–12.00 WIB</div></div>
+              <span class="jadwal-badge open">Terbuka Umum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-item"><div class="stat-num" data-target="247">0</div><div class="stat-label">Balita Terdaftar</div></div>
+        <div class="stat-item"><div class="stat-num" data-target="38">0</div><div class="stat-label">Ibu Hamil Aktif</div></div>
+        <div class="stat-item"><div class="stat-num" data-target="96">0</div><div class="stat-label">% Tingkat Kehadiran</div></div>
+        <div class="stat-item"><div class="stat-num" data-target="12">0</div><div class="stat-label">Kader Aktif</div></div>
+        <div class="stat-item"><div class="stat-num" data-target="5">0</div><div class="stat-label">Tahun Berdiri</div></div>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="about-section" id="sec-tentang">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-box">🌸<div style="font-size:20px;font-weight:800;color:var(--green-deep);margin-top:10px">Posyandu Vinca</div><div style="font-size:14px;color:var(--text-mid)">Rawabuntu, Serpong</div></div>
+          <div class="about-info">
+            <h2>Tentang Posyandu Vinca Rawa Buntu</h2>
+            <p>Posyandu Vinca Rawa Buntu adalah pos pelayanan terpadu yang melayani masyarakat RW 03 Rawabuntu, Serpong Utara sejak tahun 2019. Kami berkomitmen memberikan pelayanan kesehatan dasar yang berkualitas untuk ibu, bayi, balita, dan lansia.</p>
+            <p>Dengan platform digital ini, kami hadir untuk mempermudah akses informasi, monitoring kesehatan, dan komunikasi antara kader, bidan, dan masyarakat.</p>
+            <div class="about-values">
+              <div class="value-item"><div class="value-icon">❤️</div><div class="value-title">Peduli</div><div class="value-desc">Melayani dengan sepenuh hati</div></div>
+              <div class="value-item"><div class="value-icon">🎯</div><div class="value-title">Profesional</div><div class="value-desc">Standar layanan tertinggi</div></div>
+              <div class="value-item"><div class="value-icon">🤝</div><div class="value-title">Kolaboratif</div><div class="value-desc">Bersama untuk masyarakat</div></div>
+              <div class="value-item"><div class="value-icon">💡</div><div class="value-title">Inovatif</div><div class="value-desc">Digital untuk kesehatan</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIM -->
+    <section style="background:var(--green-pale);padding:64px 24px">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">👥 Tim Kami</div>
+          <h2 class="section-title">Pengurus & Kader Posyandu Vinca</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-card"><div class="team-avatar">👩‍⚕️</div><div class="team-name">Bdn. Wulandari</div><div class="team-role">Bidan Koordinator</div></div>
+          <div class="team-card"><div class="team-avatar">👩</div><div class="team-name">Ibu Sri Wahyuni</div><div class="team-role">Ketua Posyandu</div></div>
+          <div class="team-card"><div class="team-avatar">👩</div><div class="team-name">Ibu Dewi Anggraeni</div><div class="team-role">Kader RT 01–02</div></div>
+          <div class="team-card"><div class="team-avatar">👩</div><div class="team-name">Ibu Rahayu Putri</div><div class="team-role">Kader RT 03–04</div></div>
+          <div class="team-card"><div class="team-avatar">👩</div><div class="team-name">Ibu Nani Suryani</div><div class="team-role">Kader RT 05–06</div></div>
+          <div class="team-card"><div class="team-avatar">👨</div><div class="team-name">Pak Budi Santoso</div><div class="team-role">Ketua RW 03</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section style="background:white;padding:64px 24px" id="sec-kontak">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">📞 Kontak</div>
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="section-sub">Ada pertanyaan atau butuh bantuan? Tim kader siap membantu Anda.</p>
+        </div>
+        <div class="kontak-grid">
+          <div class="kontak-info">
+            <div class="kontak-item"><div class="kontak-icon">📍</div><div><div class="kontak-label">ALAMAT</div><div class="kontak-val">Jl. Rawabuntu, RW 03, Serpong Utara, Tangerang Selatan 15310</div></div></div>
+            <div class="kontak-item"><div class="kontak-icon">📱</div><div><div class="kontak-label">WHATSAPP KADER</div><div class="kontak-val">+62 812-3456-7890 (Ibu Sri)</div></div></div>
+            <div class="kontak-item"><div class="kontak-icon">🕐</div><div><div class="kontak-label">JAM LAYANAN</div><div class="kontak-val">Kamis & Jumat, 08.00–12.00 WIB (setiap bulan)</div></div></div>
+            <div class="kontak-item"><div class="kontak-icon">📧</div><div><div class="kontak-label">EMAIL</div><div class="kontak-val">posyandu.vinca@rawabuntu.id</div></div></div>
+          </div>
+          <div class="kontak-form">
+            <div class="kontak-form-title">✉️ Kirim Pesan</div>
+            <div class="form-group"><label class="form-label">Nama Lengkap</label><input class="form-input" type="text" placeholder="Nama Anda"></div>
+            <div class="form-group"><label class="form-label">Nomor HP / WhatsApp</label><input class="form-input" type="text" placeholder="0812-xxxx-xxxx"></div>
+            <div class="form-group"><label class="form-label">Pesan / Pertanyaan</label><textarea class="kontak-textarea" placeholder="Tulis pesan Anda di sini..."></textarea></div>
+            <button class="btn-primary" onclick="showToast('✅','Pesan Terkirim!','Kami akan segera menghubungi Anda.')">📤 Kirim Pesan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-logo">🌸</div>
+            <div><div class="footer-name">Posyandu Vinca</div><div class="footer-sub">Rawa Buntu Digital</div></div>
+          </div>
+          <p class="footer-desc">Platform digital posyandu terintegrasi untuk memantau kesehatan ibu dan anak di Rawabuntu, Serpong Utara, Tangerang Selatan.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <a onclick="showPage('akun')">E-KMS Digital</a>
+          <a onclick="showPage('akun')">Portal Orang Tua</a>
+          <a onclick="showPage('akun')">Panel Kader</a>
+          <a onclick="showToast('💉','Imunisasi','Melihat jadwal imunisasi...')">Jadwal Imunisasi</a>
+        </div>
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <a onclick="showPage('program')">Program Posyandu</a>
+          <a onclick="showPage('kegiatan')">Kegiatan</a>
+          <a onclick="showPage('berita')">Berita & Artikel</a>
+          <a onclick="scrollToSection('sec-tentang')">Tentang Kami</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <a>📱 +62 812-3456-7890</a>
+          <a>📧 posyandu.vinca@rawabuntu.id</a>
+          <a>📍 RW 03, Rawabuntu, Serpong</a>
+          <a onclick="aksesKader()">🔐 Akses Kader</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 Posyandu Vinca Rawa Buntu. Semua hak cipta dilindungi.</div>
+        <div class="footer-badges"><span class="footer-badge">🏥 Puskesmas Serpong</span><span class="footer-badge">🏛️ Dinkes Tangsel</span></div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ -->
+<!--  PAGE: PROGRAM                   -->
+<!-- ══════════════════════════════════ -->
+<div class="page" id="page-program">
+  <div class="page-wrap">
+    <div class="program-hero">
+      <div class="section-badge">📋 Program Kami</div>
+      <h1>Program Posyandu<br>Vinca Rawabuntu</h1>
+      <p>Berbagai program kesehatan komprehensif untuk mendukung tumbuh kembang anak, kesehatan ibu hamil, dan kesejahteraan keluarga di Rawabuntu.</p>
+    </div>
+    <section style="background:white">
+      <div class="container">
+        <div class="program-grid">
+          <div class="program-card">
+            <div class="program-header"><div class="program-icon">👶</div><div><div class="program-title">Posyandu Balita</div><div class="program-target">Sasaran: Bayi 0-59 bulan</div></div></div>
+            <div class="program-body">
+              <p class="program-desc">Pemantauan tumbuh kembang balita secara rutin setiap bulan dengan penimbangan, pengukuran tinggi badan, dan lingkar kepala.</p>
+              <ul class="program-list"><li>Penimbangan berat badan bulanan</li><li>Pengukuran TB & lingkar kepala</li><li>Pemantauan status gizi (KMS/E-KMS)</li><li>Deteksi dini stunting & gizi buruk</li><li>Konseling gizi untuk orang tua</li></ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-header"><div class="program-icon">🤰</div><div><div class="program-title">Kesehatan Ibu Hamil (ANC)</div><div class="program-target">Sasaran: Ibu hamil RW 03</div></div></div>
+            <div class="program-body">
+              <p class="program-desc">Pelayanan antenatal care terpadu untuk memastikan kesehatan ibu dan janin selama masa kehamilan hingga persalinan.</p>
+              <ul class="program-list"><li>Pemeriksaan kehamilan rutin (ANC)</li><li>Kelas ibu hamil setiap bulan</li><li>Suplementasi tablet Fe & vitamin</li><li>Deteksi kehamilan risiko tinggi</li><li>Persiapan persalinan & KB</li></ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-header"><div class="program-icon">💉</div><div><div class="program-title">Program Imunisasi</div><div class="program-target">Sasaran: Bayi & Balita</div></div></div>
+            <div class="program-body">
+              <p class="program-desc">Program imunisasi lengkap sesuai jadwal nasional untuk melindungi bayi dan balita dari penyakit berbahaya.</p>
+              <ul class="program-list"><li>BCG, HB, Polio sejak lahir</li><li>DPT-HB-HiB pada 2, 3, 4 bulan</li><li>MR (Campak-Rubella) usia 9 bulan</li><li>Imunisasi booster usia 18 bulan</li><li>Tracking imunisasi digital via E-KMS</li></ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-header"><div class="program-icon">🥗</div><div><div class="program-title">Gizi & PMT</div><div class="program-target">Sasaran: Balita gizi kurang</div></div></div>
+            <div class="program-body">
+              <p class="program-desc">Program perbaikan gizi dan Pemberian Makanan Tambahan (PMT) untuk mengatasi dan mencegah masalah gizi pada balita.</p>
+              <ul class="program-list"><li>Pemberian PMT untuk balita gizi kurang</li><li>Edukasi gizi seimbang & PHBS</li><li>Demonstrasi masak menu bergizi</li><li>Kebun gizi komunitas</li><li>Monitoring pemulihan gizi buruk</li></ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-header"><div class="program-icon">🧓</div><div><div class="program-title">Posyandu Lansia</div><div class="program-target">Sasaran: Usia 60 tahun ke atas</div></div></div>
+            <div class="program-body">
+              <p class="program-desc">Pelayanan kesehatan khusus untuk warga lanjut usia termasuk senam, cek kesehatan gratis, dan konseling.</p>
+              <ul class="program-list"><li>Senam lansia rutin setiap bulan</li><li>Cek tekanan darah & gula darah</li><li>Pemeriksaan kolesterol & asam urat</li><li>Konseling kesehatan & gizi lansia</li><li>Deteksi dini penyakit degeneratif</li></ul>
+            </div>
+          </div>
+          <div class="program-card">
+            <div class="program-header"><div class="program-icon">📱</div><div><div class="program-title">Digitalisasi Posyandu</div><div class="program-target">Sasaran: Semua Pengguna</div></div></div>
+            <div class="program-body">
+              <p class="program-desc">Transformasi digital layanan posyandu dengan platform terintegrasi yang memudahkan semua pihak terlibat dalam ekosistem kesehatan.</p>
+              <ul class="program-list"><li>Aplikasi mobile untuk orang tua</li><li>Dashboard kader & bidan digital</li><li>Jadwal posyandu digital</li><li>Laporan digital ke Puskesmas</li><li>Integrasi WhatsApp API untuk notifikasi</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:var(--green-pale);padding:64px 24px">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">👥 Peran Pengguna</div>
+          <h2 class="section-title">Platform untuk Semua Peran</h2>
+          <p class="section-sub">Setiap pengguna memiliki akses dan fitur yang disesuaikan dengan kebutuhan dan tanggung jawab masing-masing.</p>
+        </div>
+        <div class="role-grid">
+          <div class="role-card">
+            <div class="role-badge orangtua">👩‍👦 Orang Tua</div>
+            <h3>Portal Orang Tua</h3>
+            <div class="role-features">
+              <div class="role-feature">Data anak: input/edit nama, tanggal lahir, riwayat kesehatan</div>
+              <div class="role-feature">Kartu KMS digital: grafik berat badan, tinggi, status gizi</div>
+              <div class="role-feature">Riwayat kunjungan & catatan bidan</div>
+              <div class="role-feature">Jadwal posyandu & reminder otomatis</div>
+              <div class="role-feature">Konsultasi chat dengan kader/bidan</div>
+              <div class="role-feature">Tracker imunisasi & reminder vaksin</div>
+            </div>
+          </div>
+          <div class="role-card">
+            <div class="role-badge kader">📊 Kader</div>
+            <h3>Panel Kader</h3>
+            <div class="role-features">
+              <div class="role-feature">Input & daftarkan data anak baru</div>
+              <div class="role-feature">Form penimbangan: BB, TB, lingkar kepala</div>
+              <div class="role-feature">Monitoring status gizi semua anak</div>
+              <div class="role-feature">Monitoring ibu hamil & risiko kehamilan</div>
+              <div class="role-feature">Broadcast pengumuman massal ke orang tua</div>
+              <div class="role-feature">Manajemen jadwal posyandu</div>
+            </div>
+          </div>
+          <div class="role-card">
+            <div class="role-badge bidan">👩‍⚕️ Bidan</div>
+            <h3>Panel Bidan</h3>
+            <div class="role-features">
+              <div class="role-feature">Verifikasi & validasi data kesehatan dari kader</div>
+              <div class="role-feature">Input catatan medis & rekomendasi klinis</div>
+              <div class="role-feature">Dashboard monitoring risiko gizi buruk & stunting</div>
+              <div class="role-feature">Input nomor batch vaksin & tracking imunisasi</div>
+              <div class="role-feature">Laporan kesehatan & statistik wilayah bulanan</div>
+            </div>
+          </div>
+          <div class="role-card">
+            <div class="role-badge admin">🔐 Admin</div>
+            <h3>Panel Admin</h3>
+            <div class="role-features">
+              <div class="role-feature">CRUD akun Orang Tua, Kader, Bidan</div>
+              <div class="role-feature">Manajemen role & hak akses pengguna</div>
+              <div class="role-feature">Monitoring semua anak & status gizi</div>
+              <div class="role-feature">CMS: artikel edukasi & pengumuman</div>
+              <div class="role-feature">Export laporan PDF/Excel untuk Puskesmas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:white;padding:40px 24px">
+      <div class="container" style="text-align:center">
+        <button class="btn-secondary" onclick="showPage('home')">← Kembali ke Beranda</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ -->
+<!--  PAGE: KEGIATAN                   -->
+<!-- ══════════════════════════════════ -->
+<div class="page" id="page-kegiatan">
+  <div class="page-wrap">
+    <div class="kegiatan-hero">
+      <div class="section-badge">🎯 Kegiatan</div>
+      <h1>Kegiatan Posyandu<br>Vinca Rawabuntu</h1>
+      <p>Dokumentasi dan jadwal kegiatan posyandu yang kami laksanakan demi kesehatan dan kesejahteraan masyarakat Rawabuntu.</p>
+    </div>
+    <section style="background:white">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">📅 Timeline Kegiatan</div>
+          <h2 class="section-title">Kegiatan Terbaru & Mendatang</h2>
+        </div>
+        <div class="kegiatan-timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">📅 28 April 2025</div>
+              <div class="timeline-title">Posyandu Balita Rutin — RT 01-04</div>
+              <div class="timeline-desc">Pelaksanaan posyandu rutin bulan April dengan 89 balita hadir dari 94 yang terdaftar. Tingkat kehadiran mencapai 95%.</div>
+              <div class="timeline-tags"><span class="tag green">✅ Selesai</span><span class="tag blue">89 Balita</span><span class="tag green">95% Hadir</span></div>
+            </div>
+            <div class="timeline-dot"></div>
+            <div style="flex:1"></div>
+          </div>
+          <div class="timeline-item">
+            <div style="flex:1"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">📅 22 April 2025</div>
+              <div class="timeline-title">Kelas Ibu Hamil — Sesi 2</div>
+              <div class="timeline-desc">Kelas edukasi kehamilan dengan 15 ibu hamil dari RT 01–08. Materi nutrisi kehamilan, persiapan persalinan, dan ASI eksklusif.</div>
+              <div class="timeline-tags"><span class="tag green">✅ Selesai</span><span class="tag orange">15 Peserta</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">📅 15 April 2025</div>
+              <div class="timeline-title">Imunisasi Campak & Rubella (MR)</div>
+              <div class="timeline-desc">Pelaksanaan imunisasi MR untuk 42 bayi usia 9–18 bulan. Seluruh jadwal terlaksana tanpa KIPI serius.</div>
+              <div class="timeline-tags"><span class="tag green">✅ Selesai</span><span class="tag blue">42 Bayi</span></div>
+            </div>
+            <div class="timeline-dot"></div>
+            <div style="flex:1"></div>
+          </div>
+          <div class="timeline-item">
+            <div style="flex:1"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">📅 8 April 2025</div>
+              <div class="timeline-title">Demo Masak PMT Bergizi</div>
+              <div class="timeline-desc">Demonstrasi memasak Pemberian Makanan Tambahan (PMT) bergizi dari bahan lokal. Diikuti 28 ibu balita dan 5 kader.</div>
+              <div class="timeline-tags"><span class="tag green">✅ Selesai</span><span class="tag orange">28 Peserta</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">📅 2 Mei 2025</div>
+              <div class="timeline-title">Posyandu Balita Rutin — RT 01-04</div>
+              <div class="timeline-desc">Jadwal posyandu rutin bulan Mei. Termasuk penimbangan, pengukuran TB, dan imunisasi BCG serta DPT.</div>
+              <div class="timeline-tags"><span class="tag orange">⏰ Mendatang</span></div>
+            </div>
+            <div class="timeline-dot"></div>
+            <div style="flex:1"></div>
+          </div>
+          <div class="timeline-item">
+            <div style="flex:1"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">📅 8 Mei 2025</div>
+              <div class="timeline-title">Seminar Pencegahan Stunting</div>
+              <div class="timeline-desc">Seminar bersama Puskesmas Serpong tentang pencegahan stunting melalui 1000 Hari Pertama Kehidupan. Terbuka untuk umum.</div>
+              <div class="timeline-tags"><span class="tag orange">⏰ Mendatang</span><span class="tag blue">Terbuka Umum</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:var(--green-pale)">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">📸 Galeri Kegiatan</div>
+          <h2 class="section-title">Momen Berharga Bersama</h2>
+        </div>
+        <div class="kegiatan-gallery">
+          <div class="gallery-item" onclick="showToast('📸','Galeri','Posyandu Balita April 2025 — 89 balita hadir!')">
+            <div class="gallery-overlay">👁️ Lihat Detail</div>
+            <img src="foto/kegiatan1.jpg" alt="Posyandu Balita April 2025" class="gallery-img">
+            <div class="gallery-caption">Posyandu Balita April 2025</div>
+          </div>
+          <div class="gallery-item" onclick="showToast('📸','Galeri','Imunisasi MR — 42 bayi berhasil diimunisasi!')">
+            <div class="gallery-overlay">👁️ Lihat Detail</div>
+            <img src="foto/kegiatan1.jpg" alt="Imunisasi Massal MR April 2025" class="gallery-img">
+            <div class="gallery-caption">Imunisasi Massal MR April 2025</div>
+          </div>
+          <div class="gallery-item" onclick="showToast('📸','Galeri','Kelas Ibu Hamil — 15 peserta antusias!')">
+            <div class="gallery-overlay">👁️ Lihat Detail</div>
+            <img src="foto/kegiatan1.jpg" alt="Kelas Ibu Hamil April 2025" class="gallery-img">
+            <div class="gallery-caption">Kelas Ibu Hamil April 2025</div>
+          </div>
+          <div class="gallery-item" onclick="showToast('📸','Galeri','Demo masak PMT — menu bergizi dari bahan lokal!')">
+            <div class="gallery-overlay">👁️ Lihat Detail</div>
+            <img src="foto/kegiatan1.jpg" alt="Demo Masak PMT Bergizi" class="gallery-img">
+            <div class="gallery-caption">Demo Masak PMT Bergizi</div>
+          </div>
+          <div class="gallery-item" onclick="showToast('📸','Galeri','Senam lansia — rutin setiap bulan!')">
+            <div class="gallery-overlay">👁️ Lihat Detail</div>
+            <img src="foto/kegiatan1.jpg" alt="Senam Lansia Rutin" class="gallery-img">
+            <div class="gallery-caption">Senam Lansia Rutin</div>
+          </div>
+          <div class="gallery-item" onclick="showToast('📸','Galeri','Pelatihan digital kader — 12 kader kompeten!')">
+            <div class="gallery-overlay">👁️ Lihat Detail</div>
+            <img src="foto/kegiatan1.jpg" alt="Pelatihan Digital Kader" class="gallery-img">
+            <div class="gallery-caption">Pelatihan Digital Kader</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:white;padding:40px 24px">
+      <div class="container" style="text-align:center">
+        <button class="btn-secondary" onclick="showPage('home')">← Kembali ke Beranda</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ -->
+<!--  PAGE: BERITA                     -->
+<!-- ══════════════════════════════════ -->
+<div class="page" id="page-berita">
+  <div class="page-wrap">
+    <div class="berita-hero">
+      <div class="section-badge">📰 Berita & Artikel</div>
+      <h1>Informasi Kesehatan<br>& Berita Terkini</h1>
+      <p>Artikel edukasi kesehatan, tips parenting, dan informasi terbaru dari Posyandu Vinca Rawa Buntu untuk keluarga Indonesia.</p>
+    </div>
+    <section style="background:white">
+      <div class="container">
+        <div class="berita-featured">
+          <div class="berita-main" onclick="showToast('📰','Artikel','Membuka artikel stunting...')">
+            <div class="berita-main-thumb" style="background:linear-gradient(135deg,var(--mint),var(--green-pale))">
+              <div class="berita-main-badge">🔥 Terbaru</div>🧒
+            </div>
+            <div class="berita-main-body">
+              <div class="berita-main-date">📅 28 April 2025 · Tim Posyandu Vinca</div>
+              <div class="berita-main-title">1000 Hari Pertama Kehidupan: Fondasi Emas Generasi Sehat Indonesia</div>
+              <div class="berita-main-excerpt">Periode 1000 HPK dimulai dari konsepsi hingga usia 2 tahun adalah jendela emas yang menentukan kualitas kesehatan, kecerdasan, dan produktivitas anak di masa depan. Pelajari cara memaksimalkan periode krusial ini...</div>
+            </div>
+          </div>
+          <div class="berita-side">
+            <div class="berita-small" onclick="showToast('📰','Artikel','Membuka artikel imunisasi...')">
+              <div class="berita-small-thumb">💉</div>
+              <div><div class="berita-small-title">Jadwal Imunisasi Lengkap Bayi 0-24 Bulan</div><div class="berita-small-date">25 April 2025</div></div>
+            </div>
+            <div class="berita-small" onclick="showToast('📰','Artikel','Membuka artikel MPASI...')">
+              <div class="berita-small-thumb">🥣</div>
+              <div><div class="berita-small-title">Panduan MPASI Pertama: Apa, Kapan, dan Bagaimana?</div><div class="berita-small-date">20 April 2025</div></div>
+            </div>
+            <div class="berita-small" onclick="showToast('📰','Artikel','Membuka artikel ASI...')">
+              <div class="berita-small-thumb">🤱</div>
+              <div><div class="berita-small-title">10 Manfaat ASI Eksklusif untuk Bayi dan Ibu</div><div class="berita-small-date">15 April 2025</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="berita-list">
+          <div class="artikel-card" onclick="showToast('📰','Artikel','Membuka artikel stunting...')"><div class="artikel-thumb" style="background:var(--mint)"><div class="artikel-cat">🍼 Gizi Anak</div>🥗</div><div class="artikel-body"><div class="artikel-title">5 Tanda Anak Berisiko Stunting yang Harus Diwaspadai</div><div class="artikel-excerpt">Deteksi dini risiko stunting sangat penting untuk mencegah dampak jangka panjang pada tumbuh kembang anak...</div><div class="artikel-footer"><span class="artikel-author">👩‍⚕️ Bdn. Wulandari</span><span class="artikel-read">Baca →</span></div></div></div>
+          <div class="artikel-card" onclick="showToast('📰','Artikel','Membuka artikel nutrisi kehamilan...')"><div class="artikel-thumb" style="background:var(--peach)"><div class="artikel-cat">🤰 Kehamilan</div>🥦</div><div class="artikel-body"><div class="artikel-title">Nutrisi Penting Selama Kehamilan: Panduan Trimester</div><div class="artikel-excerpt">Asupan nutrisi yang tepat selama kehamilan sangat mempengaruhi kesehatan ibu dan perkembangan janin...</div><div class="artikel-footer"><span class="artikel-author">👩‍⚕️ Bdn. Wulandari</span><span class="artikel-read">Baca →</span></div></div></div>
+          <div class="artikel-card" onclick="showToast('📰','Artikel','Membuka artikel tumbuh kembang...')"><div class="artikel-thumb" style="background:var(--sky)"><div class="artikel-cat">👶 Tumbuh Kembang</div>🌱</div><div class="artikel-body"><div class="artikel-title">Milestone Tumbuh Kembang Bayi 0-12 Bulan</div><div class="artikel-excerpt">Setiap bayi berkembang dengan kecepatan uniknya. Kenali milestone penting yang perlu Anda pantau...</div><div class="artikel-footer"><span class="artikel-author">📊 Tim Kader</span><span class="artikel-read">Baca →</span></div></div></div>
+        </div>
+      </div>
+    </section>
+    <section style="background:white;padding:40px 24px">
+      <div class="container" style="text-align:center">
+        <button class="btn-secondary" onclick="showPage('home')">← Kembali ke Beranda</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  PAGE: AKUN                                -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page" id="page-akun">
+  <div class="page-wrap">
+    <div class="akun-page">
+      <div class="akun-wrap">
+
+        <!-- ── AUTH STATE (belum login) ── -->
+        <div id="akunAuthState">
+          <div class="akun-auth-card">
+            <div class="akun-auth-logo">
+              <div class="logo-big">🌸</div>
+              <h2>Masuk ke Akun Anda</h2>
+              <p>Akses layanan posyandu digital Rawabuntu</p>
+            </div>
+            <div class="akun-auth-tabs">
+              <button class="akun-auth-tab active" onclick="switchAuthTab(this,'auth-login')">🔑 Masuk</button>
+              <button class="akun-auth-tab" onclick="switchAuthTab(this,'auth-daftar')">✨ Daftar Baru</button>
+              <button class="akun-auth-tab" onclick="switchAuthTab(this,'auth-kader')">📊 Akses Kader</button>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div class="auth-form active" id="auth-login">
+              <div class="form-group"><label class="form-label">Username / Email</label><input class="form-input" type="text" id="loginUser" placeholder="Masukkan username atau email"></div>
+              <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" id="loginPass" placeholder="Masukkan password"></div>
+              <div class="form-error" id="loginError">❌ Username atau password salah.</div>
+              <button class="form-btn" onclick="doLogin()">🚀 Masuk ke Platform</button>
+              <p style="text-align:center;font-size:12px;color:var(--text-light);margin-top:14px">Demo akun: <strong>user</strong> / <strong>1234</strong> &nbsp;|&nbsp; Ibu Hamil: <strong>hamil</strong> / <strong>1234</strong></p>
+              <div style="text-align:center;margin-top:12px;font-size:13px;color:var(--text-mid)">Belum punya akun? <a onclick="switchAuthTabById('auth-daftar')" style="color:var(--green-deep);font-weight:800;cursor:pointer">Daftar sekarang →</a></div>
+            </div>
+
+            <!-- DAFTAR FORM -->
+            <div class="auth-form" id="auth-daftar">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Nama Lengkap</label><input class="form-input" type="text" id="daftarNama" placeholder="Nama lengkap Anda"></div>
+                <div class="form-group"><label class="form-label">Nomor HP</label><input class="form-input" type="text" id="daftarHp" placeholder="0812-xxxx-xxxx"></div>
+              </div>
+              <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" id="daftarEmail" placeholder="email@contoh.com"></div>
+              <div class="form-group"><label class="form-label">Alamat (RT/RW)</label><input class="form-input" type="text" id="daftarAlamat" placeholder="Contoh: RT 03 RW 07"></div>
+              <div class="form-group"><label class="form-label">Username</label><input class="form-input" type="text" id="daftarUsername" placeholder="Buat username unik Anda"></div>
+              <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" id="daftarPassword" placeholder="Buat password minimal 6 karakter"></div>
+              <div class="form-group"><label class="form-label">Konfirmasi Password</label><input class="form-input" type="password" id="daftarConfirm" placeholder="Ulangi password Anda"></div>
+              <div class="form-error" id="daftarError">❌ Terjadi kesalahan.</div>
+              <button class="form-btn" onclick="doDaftar()">✨ Daftar Akun Sekarang</button>
+            </div>
+
+            <!-- KADER ACCESS FORM -->
+            <div class="auth-form" id="auth-kader">
+              <div style="background:var(--sky);border-radius:var(--radius-sm);padding:16px;margin-bottom:20px;text-align:center;border:2px solid #b0d8f8">
+                <div style="font-size:28px;margin-bottom:6px">📊</div>
+                <div style="font-weight:800;color:#1a6ea8;font-size:14px">Akses Kader Posyandu Vinca</div>
+                <div style="font-size:12px;color:#4a8ab8;margin-top:4px">Khusus untuk kader, bidan, dan admin posyandu</div>
+              </div>
+              <div class="form-group"><label class="form-label">Username Kader</label><input class="form-input" type="text" id="kaderUser" placeholder="Masukkan username kader"></div>
+              <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" id="kaderPass" placeholder="Masukkan password"></div>
+              <div class="form-error" id="kaderError">❌ Username atau password salah.</div>
+              <button class="form-btn" onclick="doKaderLogin()">📊 Masuk Panel Kader</button>
+              <p style="text-align:center;font-size:12px;color:var(--text-light);margin-top:12px">Demo kader: <strong>admin</strong> / <strong>1234</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── LOGGED IN STATE: ORANG TUA ── -->
+        <div id="akunUserState" style="display:none">
+          <div class="akun-card">
+            <div class="akun-header">
+              <div class="akun-avatar-big">👩‍👦</div>
+              <div style="flex:1"><div class="akun-name">Ibu Siti Rahayu</div><div class="akun-role-badge orangtua">👩‍👦 Orang Tua</div></div>
+              <button class="logout-btn" onclick="doLogout()">🚪 Keluar</button>
+            </div>
+            <div class="akun-tabs">
+              <div class="akun-tab active" onclick="switchAkunTab(this,'tab-profil')">👤 Profil Saya</div>
+              <div class="akun-tab" onclick="switchAkunTab(this,'tab-anak')">👶 Data Anak</div>
+              <div class="akun-tab" onclick="switchAkunTab(this,'tab-kunjungan')">📅 Riwayat</div>
+              <div class="akun-tab" onclick="switchAkunTab(this,'tab-imunisasi')">💉 Imunisasi</div>
+              <div class="akun-tab" onclick="switchAkunTab(this,'tab-loyalty')">🏆 Poin Loyalty</div>
+            </div>
+
+            <!-- TAB: PROFIL -->
+            <div class="akun-tab-content active" id="tab-profil">
+              <div class="akun-section-title">📋 Data Pribadi</div>
+              <div class="akun-data-grid" id="profilDisplayGrid">
+                <div class="akun-field"><div class="akun-field-label">NAMA LENGKAP</div><div class="akun-field-val" id="dpNama">Siti Rahayu</div></div>
+                <div class="akun-field"><div class="akun-field-label">NOMOR HP</div><div class="akun-field-val" id="dpHp">+62 812-9876-5432</div></div>
+                <div class="akun-field"><div class="akun-field-label">EMAIL</div><div class="akun-field-val" id="dpEmail">siti.rahayu@email.com</div></div>
+                <div class="akun-field"><div class="akun-field-label">ALAMAT</div><div class="akun-field-val" id="dpAlamat">RT 05 RW 03, Rawa Buntu</div></div>
+                <div class="akun-field"><div class="akun-field-label">NIK</div><div class="akun-field-val" id="dpNik">36****1234</div></div>
+                <div class="akun-field"><div class="akun-field-label">ANGGOTA SEJAK</div><div class="akun-field-val">Januari 2023</div></div>
+              </div>
+              <div style="margin-top:20px"><button class="btn-primary" onclick="openEditProfil()">✏️ Edit Profil</button></div>
+
+              <!-- ── GANTI PASSWORD ── -->
+              <div style="margin-top:28px;border-top:2px solid var(--mint);padding-top:24px">
+                <div class="akun-section-title">🔒 Ganti Password</div>
+                <div style="background:var(--green-pale);border-radius:var(--radius-sm);padding:20px;border:2px solid var(--green-light)">
+                  <div class="form-group">
+                    <label class="form-label">Password Lama</label>
+                    <input class="form-input" type="password" id="gantiPassLama" placeholder="Masukkan password saat ini">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Password Baru</label>
+                    <input class="form-input" type="password" id="gantiPassBaru" placeholder="Password baru minimal 6 karakter">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Konfirmasi Password Baru</label>
+                    <input class="form-input" type="password" id="gantiPassKonfirmasi" placeholder="Ulangi password baru Anda">
+                  </div>
+                  <div class="form-error" id="gantiPassError">❌ Terjadi kesalahan.</div>
+                  <button class="btn-primary" onclick="gantiPassword()">🔒 Ubah Password</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB: DATA ANAK -->
+            <div class="akun-tab-content" id="tab-anak">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+                <div class="akun-section-title" style="margin-bottom:0">👶 Data Anak Terdaftar</div>
+                <button class="btn-primary" style="padding:8px 18px;font-size:12px" onclick="openTambahAnak()">➕ Tambah Anak Baru</button>
+              </div>
+              <div id="anakList">
+                <div class="akun-anak-card" id="anak-1">
+                  <div class="akun-anak-header">
+                    <div class="akun-anak-avatar">👦</div>
+                    <div style="flex:1"><div class="akun-anak-name">Muhammad Raffa</div><div class="akun-anak-meta">Lahir: 15 Juni 2023 · Laki-laki · 22 bulan</div></div>
+                    <button class="btn-secondary" style="padding:6px 14px;font-size:12px" onclick="openEditAnak('Muhammad Raffa','2023-06-15','Laki-laki',1)">✏️ Edit</button>
+                    <button class="btn-primary" style="padding:6px 14px;font-size:12px" onclick="openEkmsModal('Muhammad Raffa',1)">📋 E-KMS</button>
+                  </div>
+                  <div class="akun-stats-mini">
+                    <div class="akun-stat-mini"><div class="val">10.2</div><div class="lbl">BB (kg)</div></div>
+                    <div class="akun-stat-mini"><div class="val">82</div><div class="lbl">TB (cm)</div></div>
+                    <div class="akun-stat-mini"><div class="val">46</div><div class="lbl">LK (cm)</div></div>
+                    <div class="akun-stat-mini"><div class="val">Normal</div><div class="lbl">Status Gizi</div></div>
+                  </div>
+                </div>
+                <div class="akun-anak-card" id="anak-2">
+                  <div class="akun-anak-header">
+                    <div class="akun-anak-avatar">👧</div>
+                    <div style="flex:1"><div class="akun-anak-name">Nayla Putri</div><div class="akun-anak-meta">Lahir: 10 Februari 2022 · Perempuan · 38 bulan</div></div>
+                    <button class="btn-secondary" style="padding:6px 14px;font-size:12px" onclick="openEditAnak('Nayla Putri','2022-02-10','Perempuan',2)">✏️ Edit</button>
+                    <button class="btn-primary" style="padding:6px 14px;font-size:12px" onclick="openEkmsModal('Nayla Putri',2)">📋 E-KMS</button>
+                  </div>
+                  <div class="akun-stats-mini">
+                    <div class="akun-stat-mini"><div class="val">13.8</div><div class="lbl">BB (kg)</div></div>
+                    <div class="akun-stat-mini"><div class="val">98</div><div class="lbl">TB (cm)</div></div>
+                    <div class="akun-stat-mini"><div class="val">49</div><div class="lbl">LK (cm)</div></div>
+                    <div class="akun-stat-mini"><div class="val">Normal</div><div class="lbl">Status Gizi</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB: KUNJUNGAN -->
+            <div class="akun-tab-content" id="tab-kunjungan">
+              <div class="akun-section-title">📅 Riwayat Kunjungan Posyandu</div>
+              <div class="kunjungan-list">
+                <div class="kunjungan-item"><div class="kunjungan-icon">🏥</div><div style="flex:1"><div class="kunjungan-date">28 April 2025</div><div class="kunjungan-title">Posyandu Balita Rutin</div><div class="kunjungan-desc">BB: 10.2 kg | TB: 82 cm | Status: Normal ✓</div></div><span class="tag green">Hadir</span></div>
+                <div class="kunjungan-item"><div class="kunjungan-icon">💉</div><div style="flex:1"><div class="kunjungan-date">15 April 2025</div><div class="kunjungan-title">Imunisasi MR</div><div class="kunjungan-desc">Imunisasi Campak-Rubella berhasil diberikan</div></div><span class="tag green">Hadir</span></div>
+                <div class="kunjungan-item"><div class="kunjungan-icon">🏥</div><div style="flex:1"><div class="kunjungan-date">28 Maret 2025</div><div class="kunjungan-title">Posyandu Balita Rutin</div><div class="kunjungan-desc">BB: 9.8 kg | TB: 80 cm | Status: Normal ✓</div></div><span class="tag green">Hadir</span></div>
+                <div class="kunjungan-item"><div class="kunjungan-icon">🏥</div><div style="flex:1"><div class="kunjungan-date">28 Februari 2025</div><div class="kunjungan-title">Posyandu Balita Rutin</div><div class="kunjungan-desc">BB: 9.3 kg | TB: 78 cm | Status: Normal ✓</div></div><span class="tag green">Hadir</span></div>
+                <div class="kunjungan-item"><div class="kunjungan-icon">🏥</div><div style="flex:1"><div class="kunjungan-date">28 Januari 2025</div><div class="kunjungan-title">Posyandu Balita Rutin</div><div class="kunjungan-desc">BB: 8.9 kg | TB: 76 cm | Status: Normal ✓</div></div><span class="tag green">Hadir</span></div>
+              </div>
+            </div>
+
+            <!-- TAB: IMUNISASI -->
+            <div class="akun-tab-content" id="tab-imunisasi">
+              <div class="akun-section-title">💉 Tracker Imunisasi — Muhammad Raffa</div>
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">BCG</div><div style="font-size:11px;color:var(--text-light)">15 Juni 2023 · Lahir</div></div><span class="tag green">✓ Sudah</span></div>
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">DPT-HB-HiB (1)</div><div style="font-size:11px;color:var(--text-light)">15 Agustus 2023 · 2 bulan</div></div><span class="tag green">✓ Sudah</span></div>
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">DPT-HB-HiB (2)</div><div style="font-size:11px;color:var(--text-light)">15 September 2023 · 3 bulan</div></div><span class="tag green">✓ Sudah</span></div>
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">Campak-Rubella (MR)</div><div style="font-size:11px;color:var(--text-light)">15 Maret 2024 · 9 bulan</div></div><span class="tag green">✓ Sudah</span></div>
+                <div style="background:var(--yellow);border-radius:10px;padding:14px 16px;border:2px solid #ffd700;display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">DPT-HB-HiB Booster</div><div style="font-size:11px;color:var(--text-mid)">📅 Jadwal: Desember 2024 · 18 bulan</div></div><span class="tag orange">⏰ Segera</span></div>
+              </div>
+            </div>
+
+            <!-- TAB: LOYALTY -->
+            <div class="akun-tab-content" id="tab-loyalty">
+              <div class="akun-section-title">🏆 Poin Loyalty Saya</div>
+              <div style="background:var(--green-pale);border-radius:var(--radius-sm);padding:24px;border:2px solid var(--green-light);text-align:center;margin-bottom:20px">
+                <div style="font-family:'Playfair Display',serif;font-size:52px;font-weight:800;color:var(--green-deep)">1.250</div>
+                <div style="font-size:14px;color:var(--text-mid);font-weight:700">Poin Terkumpul · Level ⭐ Bintang Emas</div>
+                <div style="margin-top:12px;background:white;border-radius:8px;height:12px;overflow:hidden;border:2px solid var(--green-light)"><div style="height:100%;width:68%;background:linear-gradient(90deg,var(--green-main),var(--green-deep));border-radius:6px"></div></div>
+                <div style="font-size:12px;color:var(--text-mid);margin-top:8px;font-weight:600">1.250 / 1.500 poin menuju Level Permata 💎</div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+                <div style="background:white;border-radius:var(--radius-sm);padding:16px;text-align:center;border:2px solid var(--mint);cursor:pointer" onclick="showToast('🎁','Reward','Tukar 300 poin untuk Vitamin Anak!')"><div style="font-size:28px;margin-bottom:8px">💊</div><div style="font-size:12px;font-weight:800">Vitamin Anak</div><div style="font-size:11px;color:var(--text-light)">300 poin</div></div>
+                <div style="background:white;border-radius:var(--radius-sm);padding:16px;text-align:center;border:2px solid var(--mint);cursor:pointer" onclick="showToast('🎁','Reward','Tukar 500 poin untuk Sembako!')"><div style="font-size:28px;margin-bottom:8px">🛍️</div><div style="font-size:12px;font-weight:800">Sembako</div><div style="font-size:11px;color:var(--text-light)">500 poin</div></div>
+                <div style="background:white;border-radius:var(--radius-sm);padding:16px;text-align:center;border:2px solid var(--mint);cursor:pointer" onclick="showToast('🎁','Reward','Tukar 700 poin untuk Cek Kesehatan!')"><div style="font-size:28px;margin-bottom:8px">🏥</div><div style="font-size:12px;font-weight:800">Cek Kesehatan</div><div style="font-size:11px;color:var(--text-light)">700 poin</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── LOGGED IN STATE: IBU HAMIL ── -->
+        <div id="akunHamilState" style="display:none">
+          <div class="akun-card">
+            <div class="akun-header">
+              <div class="akun-avatar-big">🤰</div>
+              <div style="flex:1"><div class="akun-name">Ibu Sari Wulandari</div><div class="akun-role-badge hamil">🤰 Ibu Hamil</div></div>
+              <button class="logout-btn" onclick="doHamilLogout()">🚪 Keluar</button>
+            </div>
+            <div class="akun-tabs">
+              <div class="akun-tab active" onclick="switchHamilTab(this,'htab-dashboard')">🏠 Dashboard</div>
+              <div class="akun-tab" onclick="switchHamilTab(this,'htab-jadwal-anc')">📅 Jadwal ANC</div>
+              <div class="akun-tab" onclick="switchHamilTab(this,'htab-kelas')">📚 Kelas Bumil</div>
+              <div class="akun-tab" onclick="switchHamilTab(this,'htab-tips')">💡 Nutrisi & Tips</div>
+            </div>
+
+            <!-- HTAB: DASHBOARD HAMIL -->
+            <div class="akun-tab-content active" id="htab-dashboard">
+              <div class="akun-section-title">🤰 Ringkasan Kehamilan Saya</div>
+              <div class="hamil-dashboard-grid">
+                <div class="hamil-info-card">
+                  <div class="big-num">28</div>
+                  <div class="big-lbl">Minggu Usia Kehamilan</div>
+                  <div style="margin-top:8px;font-size:12px;color:#c05a20;font-weight:700">📍 Trimester III (7–9 bulan)</div>
+                  <div style="margin-top:10px;background:rgba(255,255,255,0.6);border-radius:6px;height:8px;overflow:hidden"><div style="height:100%;width:70%;background:#c05a20;border-radius:6px"></div></div>
+                  <div style="font-size:11px;color:#c05a20;margin-top:4px">28 / 40 minggu</div>
+                </div>
+                <div class="hamil-anc-card">
+                  <div class="anc-lbl">📅 Kunjungan ANC Berikutnya</div>
+                  <div class="anc-date" style="margin-top:8px">5 Mei 2025</div>
+                  <div style="font-size:12px;color:#4a80b8;margin-top:4px">Puskesmas Serpong · 09.00 WIB</div>
+                  <button class="btn-primary" style="margin-top:12px;padding:8px 16px;font-size:12px" onclick="showToast('📅','Pengingat','Pengingat ANC 5 Mei ditetapkan!')">🔔 Ingatkan Saya</button>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
+                <div style="background:var(--green-pale);border-radius:10px;padding:16px;text-align:center;border:2px solid var(--green-light)">
+                  <div style="font-size:24px;font-weight:900;color:var(--green-deep);font-family:'Playfair Display',serif">+8.5</div>
+                  <div style="font-size:11px;color:var(--text-light);font-weight:600">kg kenaikan BB</div>
+                </div>
+                <div style="background:var(--sky);border-radius:10px;padding:16px;text-align:center;border:2px solid #b0d8f8">
+                  <div style="font-size:24px;font-weight:900;color:#1a5ea8;font-family:'Playfair Display',serif">120</div>
+                  <div style="font-size:11px;color:#4a8ab8;font-weight:600">mmHg tekanan darah</div>
+                </div>
+                <div style="background:var(--peach);border-radius:10px;padding:16px;text-align:center;border:2px solid #ffc0a0">
+                  <div style="font-size:24px;font-weight:900;color:#c05a20;font-family:'Playfair Display',serif">6</div>
+                  <div style="font-size:11px;color:#a07020;font-weight:600">kunjungan ANC done</div>
+                </div>
+              </div>
+              <div style="background:var(--yellow);border-radius:var(--radius-sm);padding:16px;border:2px solid #ffd700">
+                <div style="font-weight:800;color:#a07020;margin-bottom:8px">⚠️ Taksiran Persalinan</div>
+                <div style="font-size:18px;font-weight:900;color:#c05a20">15 Juni 2025</div>
+                <div style="font-size:12px;color:#a07020;margin-top:4px">± 12 minggu lagi · Tetap pantau kesehatan Anda</div>
+              </div>
+            </div>
+
+            <!-- HTAB: JADWAL ANC -->
+            <div class="akun-tab-content" id="htab-jadwal-anc">
+              <div class="akun-section-title">📅 Jadwal Pemeriksaan Kehamilan (ANC)</div>
+              <div style="display:flex;flex-direction:column;gap:12px">
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">ANC ke-1 — Trimester I</div><div style="font-size:11px;color:var(--text-light);margin-top:3px">📅 10 Oktober 2024 · Puskesmas Serpong</div><div style="font-size:12px;color:var(--text-mid);margin-top:3px">BB: 52 kg | TD: 110/70 | Normal</div></div><span class="tag green">✓ Selesai</span></div>
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">ANC ke-2 — Trimester I</div><div style="font-size:11px;color:var(--text-light);margin-top:3px">📅 10 November 2024 · Puskesmas Serpong</div><div style="font-size:12px;color:var(--text-mid);margin-top:3px">BB: 53.5 kg | TD: 112/72 | Normal</div></div><span class="tag green">✓ Selesai</span></div>
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">ANC ke-3 — Trimester II</div><div style="font-size:11px;color:var(--text-light);margin-top:3px">📅 15 Januari 2025 · Puskesmas Serpong</div><div style="font-size:12px;color:var(--text-mid);margin-top:3px">BB: 55.5 kg | TD: 115/75 | Normal</div></div><span class="tag green">✓ Selesai</span></div>
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">ANC ke-4 — Trimester II</div><div style="font-size:11px;color:var(--text-light);margin-top:3px">📅 10 Februari 2025 · Puskesmas Serpong</div><div style="font-size:12px;color:var(--text-mid);margin-top:3px">BB: 57 kg | TD: 118/76 | Normal</div></div><span class="tag green">✓ Selesai</span></div>
+                <div style="background:var(--green-pale);border-radius:10px;padding:14px 16px;border:2px solid var(--green-light);display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">ANC ke-5 — Trimester III</div><div style="font-size:11px;color:var(--text-light);margin-top:3px">📅 10 April 2025 · Puskesmas Serpong</div><div style="font-size:12px;color:var(--text-mid);margin-top:3px">BB: 60 kg | TD: 120/80 | Normal</div></div><span class="tag green">✓ Selesai</span></div>
+                <div style="background:var(--yellow);border-radius:10px;padding:14px 16px;border:2px solid #ffd700;display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;font-size:13px">ANC ke-6 — Trimester III</div><div style="font-size:11px;color:var(--text-mid);margin-top:3px">📅 5 Mei 2025 · Puskesmas Serpong · 09.00 WIB</div></div><span class="tag orange">⏰ Mendatang</span></div>
+              </div>
+            </div>
+
+            <!-- HTAB: KELAS BUMIL -->
+            <div class="akun-tab-content" id="htab-kelas">
+              <div class="akun-section-title">📚 Riwayat Kelas Ibu Hamil</div>
+              <div style="margin-bottom:16px">
+                <div class="hamil-kelas-item"><div class="hamil-kelas-icon">🥗</div><div style="flex:1"><div style="font-weight:800;font-size:13px">Sesi 1: Nutrisi Kehamilan Trimester I</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">📅 22 Oktober 2024 · Posyandu Vinca · Bdn. Wulandari</div></div><span class="tag green">✓ Hadir</span></div>
+                <div class="hamil-kelas-item"><div class="hamil-kelas-icon">🧘</div><div style="flex:1"><div style="font-weight:800;font-size:13px">Sesi 2: Senam Hamil & Persiapan Persalinan</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">📅 20 November 2024 · Posyandu Vinca</div></div><span class="tag green">✓ Hadir</span></div>
+                <div class="hamil-kelas-item"><div class="hamil-kelas-icon">🤱</div><div style="flex:1"><div style="font-weight:800;font-size:13px">Sesi 3: Persiapan ASI Eksklusif</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">📅 22 Januari 2025 · Posyandu Vinca</div></div><span class="tag green">✓ Hadir</span></div>
+                <div class="hamil-kelas-item"><div class="hamil-kelas-icon">👶</div><div style="flex:1"><div style="font-weight:800;font-size:13px">Sesi 4: Nutrisi Trimester III & Tanda Bahaya</div><div style="font-size:11px;color:var(--text-light);margin-top:2px">📅 22 April 2025 · Posyandu Vinca</div></div><span class="tag green">✓ Hadir</span></div>
+                <div class="hamil-kelas-item" style="background:var(--green-pale);border:2px solid var(--green-light)"><div class="hamil-kelas-icon" style="background:var(--yellow)">📋</div><div style="flex:1"><div style="font-weight:800;font-size:13px">Sesi 5: Persiapan Persalinan Trimester III</div><div style="font-size:11px;color:var(--text-mid);margin-top:2px">📅 21 Mei 2025 · Posyandu Vinca · 09.00–11.00</div></div><span class="tag orange">⏰ Mendatang</span></div>
+              </div>
+            </div>
+
+            <!-- HTAB: TIPS NUTRISI -->
+            <div class="akun-tab-content" id="htab-tips">
+              <div class="akun-section-title">💡 Tips Nutrisi Kehamilan — Trimester III</div>
+              <div class="hamil-tip-card">
+                <div class="hamil-tip-title">🥩 Protein Tinggi untuk Pertumbuhan Janin</div>
+                <div class="hamil-tip-text">Konsumsi 70–100 gram protein per hari dari sumber seperti ikan, ayam, telur, tahu, dan tempe. Protein penting untuk pertumbuhan otak dan organ janin di trimester akhir.</div>
+              </div>
+              <div class="hamil-tip-card">
+                <div class="hamil-tip-title">🥛 Kalsium untuk Tulang & Gigi</div>
+                <div class="hamil-tip-text">Kebutuhan kalsium meningkat di trimester III menjadi 1.000–1.200 mg/hari. Konsumsi susu, yogurt, ikan teri, brokoli, dan kacang-kacangan setiap hari.</div>
+              </div>
+              <div class="hamil-tip-card">
+                <div class="hamil-tip-title">🫀 Zat Besi Cegah Anemia</div>
+                <div class="hamil-tip-text">Minum tablet Fe (zat besi) setiap malam sebelum tidur. Konsumsi makanan kaya zat besi: hati ayam, daging merah, bayam, dan kacang merah. Hindari kopi/teh bersama tablet Fe.</div>
+              </div>
+              <div class="hamil-tip-card">
+                <div class="hamil-tip-title">💧 Minum Air yang Cukup</div>
+                <div class="hamil-tip-text">Minumlah minimal 8–10 gelas air putih per hari (2–2,5 liter). Kecukupan cairan mencegah kontraksi dini dan membantu sirkulasi nutrisi ke janin.</div>
+              </div>
+              <div class="hamil-tip-card">
+                <div class="hamil-tip-title">⚠️ Tanda Bahaya yang Perlu Diwaspadai</div>
+                <div class="hamil-tip-text">Segera ke fasilitas kesehatan jika mengalami: perdarahan, bengkak tiba-tiba pada wajah/tangan, sakit kepala hebat, gangguan penglihatan, atau gerakan janin berkurang drastis.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── LOGGED IN STATE: KADER ── -->
+        <div id="akunKaderState" style="display:none">
+          <div class="akun-card">
+            <div class="akun-header">
+              <div class="akun-avatar-big">📊</div>
+              <div style="flex:1"><div class="akun-name">Panel Kader — Posyandu Vinca</div><div class="akun-role-badge kader">📊 Kader / Admin</div></div>
+              <button class="logout-btn" onclick="doKaderLogout()">🚪 Keluar</button>
+            </div>
+            <div class="kader-stat-row">
+              <div class="kader-stat"><div class="num">247</div><div class="lbl">Total Balita</div></div>
+              <div class="kader-stat"><div class="num">38</div><div class="lbl">Ibu Hamil</div></div>
+              <div class="kader-stat"><div class="num" style="color:#e53e3e">17</div><div class="lbl">Risiko Stunting</div></div>
+              <div class="kader-stat"><div class="num">96%</div><div class="lbl">Kehadiran</div></div>
+              <div class="kader-stat"><div class="num">12</div><div class="lbl">Kader Aktif</div></div>
+            </div>
+            <div class="akun-tabs" style="margin-top:24px">
+              <div class="akun-tab active" onclick="switchKaderTab(this,'ktab-monitoring')">👁️ Monitoring Anak</div>
+              <div class="akun-tab" onclick="switchKaderTab(this,'ktab-hamil')">🤰 Ibu Hamil</div>
+              <div class="akun-tab" onclick="switchKaderTab(this,'ktab-daftar-anak')">➕ Daftarkan Anak</div>
+              <div class="akun-tab" onclick="switchKaderTab(this,'ktab-laporan')">📊 Laporan</div>
+              <div class="akun-tab" onclick="switchKaderTab(this,'ktab-broadcast')">📢 Broadcast</div>
+            </div>
+
+            <!-- Kader Tab: Monitoring Anak -->
+            <div class="akun-tab-content active" id="ktab-monitoring">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+                <div class="akun-section-title" style="margin-bottom:0">👁️ Monitoring Semua Anak</div>
+                <select class="form-input" style="width:auto;padding:8px 12px;font-size:12px" onchange="filterMonitor(this.value)">
+                  <option value="all">Semua Status</option>
+                  <option value="normal">Normal</option>
+                  <option value="kurang">Gizi Kurang</option>
+                  <option value="risiko">Risiko Stunting</option>
+                </select>
+              </div>
+              <div class="kader-table-wrap">
+                <table class="kader-table" id="monitoringTable">
+                  <thead>
+                    <tr><th>Nama Anak</th><th>Usia</th><th>BB (kg)</th><th>TB (cm)</th><th>Orang Tua</th><th>RT</th><th>Status Gizi</th><th>Aksi</th></tr>
+                  </thead>
+                  <tbody id="monitoringBody">
+                    <tr data-status="normal"><td>Muhammad Raffa</td><td>22 bln</td><td>10.2</td><td>82</td><td>Ibu Siti R.</td><td>RT 05</td><td><span class="status-badge normal">Normal</span></td><td><button onclick="openDetailAnak('Muhammad Raffa')" style="background:var(--green-pale);border:2px solid var(--green-light);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:var(--green-deep)">Detail</button></td></tr>
+                    <tr data-status="normal"><td>Nayla Putri</td><td>38 bln</td><td>13.8</td><td>98</td><td>Ibu Siti R.</td><td>RT 05</td><td><span class="status-badge normal">Normal</span></td><td><button onclick="openDetailAnak('Nayla Putri')" style="background:var(--green-pale);border:2px solid var(--green-light);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:var(--green-deep)">Detail</button></td></tr>
+                    <tr data-status="risiko"><td>Aisyah Nur</td><td>18 bln</td><td>7.2</td><td>72</td><td>Ibu Dewi A.</td><td>RT 03</td><td><span class="status-badge risiko">Risiko Stunting</span></td><td><button onclick="openDetailAnak('Aisyah Nur')" style="background:#ffe0e0;border:2px solid #ffc0c0;border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:#c53030">Pantau</button></td></tr>
+                    <tr data-status="kurang"><td>Rifki Ananda</td><td>24 bln</td><td>9.8</td><td>78</td><td>Bpk. Hendra</td><td>RT 08</td><td><span class="status-badge kurang">Gizi Kurang</span></td><td><button onclick="openDetailAnak('Rifki Ananda')" style="background:var(--green-pale);border:2px solid var(--green-light);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:var(--green-deep)">Detail</button></td></tr>
+                    <tr data-status="normal"><td>Salwa Khairunnisa</td><td>12 bln</td><td>9.4</td><td>74</td><td>Ibu Yuni P.</td><td>RT 01</td><td><span class="status-badge normal">Normal</span></td><td><button onclick="openDetailAnak('Salwa Khairunnisa')" style="background:var(--green-pale);border:2px solid var(--green-light);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:var(--green-deep)">Detail</button></td></tr>
+                    <tr data-status="normal"><td>Farhan Maulana</td><td>30 bln</td><td>12.1</td><td>90</td><td>Ibu Rina S.</td><td>RT 07</td><td><span class="status-badge normal">Normal</span></td><td><button onclick="openDetailAnak('Farhan Maulana')" style="background:var(--green-pale);border:2px solid var(--green-light);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:var(--green-deep)">Detail</button></td></tr>
+                    <tr data-status="risiko"><td>Zahra Amelia</td><td>15 bln</td><td>6.8</td><td>68</td><td>Ibu Fatimah</td><td>RT 04</td><td><span class="status-badge risiko">Risiko Stunting</span></td><td><button onclick="openDetailAnak('Zahra Amelia')" style="background:#ffe0e0;border:2px solid #ffc0c0;border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:#c53030">Pantau</button></td></tr>
+                    <tr data-status="normal"><td>Bimo Prasetyo</td><td>48 bln</td><td>15.5</td><td>102</td><td>Ibu Sri W.</td><td>RT 02</td><td><span class="status-badge normal">Normal</span></td><td><button onclick="openDetailAnak('Bimo Prasetyo')" style="background:var(--green-pale);border:2px solid var(--green-light);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:var(--green-deep)">Detail</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style="font-size:12px;color:var(--text-light);margin-top:12px;text-align:center">Menampilkan 8 dari 247 anak terdaftar.</p>
+            </div>
+
+            <!-- Kader Tab: Monitoring Ibu Hamil (BARU) -->
+            <div class="akun-tab-content" id="ktab-hamil">
+              <div class="akun-section-title">🤰 Monitoring Ibu Hamil Terdaftar</div>
+              <div class="kader-table-wrap">
+                <table class="kader-table">
+                  <thead>
+                    <tr><th>Nama Ibu</th><th>Usia Kandungan</th><th>Taksiran Persalinan</th><th>RT</th><th>Status Risiko</th><th>Aksi</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Ibu Sari Wulandari</td><td>28 minggu</td><td>15 Jun 2025</td><td>RT 01</td><td><span class="risiko-badge rendah">🟢 Rendah</span></td><td><button onclick="openDetailHamil(0)" style="background:var(--green-pale);border:2px solid var(--green-light);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:var(--green-deep)">Detail</button></td></tr>
+                    <tr><td>Ibu Dewi Anggraeni</td><td>20 minggu</td><td>28 Jul 2025</td><td>RT 03</td><td><span class="risiko-badge sedang">🟡 Sedang</span></td><td><button onclick="openDetailHamil(1)" style="background:var(--yellow);border:2px solid #ffd700;border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:#a07020">Detail</button></td></tr>
+                    <tr><td>Ibu Fitri Lestari</td><td>32 minggu</td><td>02 Aug 2025</td><td>RT 06</td><td><span class="risiko-badge tinggi">🔴 Tinggi</span></td><td><button onclick="openDetailHamil(2)" style="background:#ffe0e0;border:2px solid #ffc0c0;border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:#c53030">Detail</button></td></tr>
+                    <tr><td>Ibu Nani Suryani</td><td>16 minggu</td><td>20 Sep 2025</td><td>RT 02</td><td><span class="risiko-badge rendah">🟢 Rendah</span></td><td><button onclick="openDetailHamil(3)" style="background:var(--green-pale);border:2px solid var(--green-light);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:var(--green-deep)">Detail</button></td></tr>
+                    <tr><td>Ibu Rini Cahyani</td><td>36 minggu</td><td>10 Oct 2025</td><td>RT 04</td><td><span class="risiko-badge tinggi">🔴 Tinggi</span></td><td><button onclick="openDetailHamil(4)" style="background:#ffe0e0;border:2px solid #ffc0c0;border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:#c53030">Detail</button></td></tr>
+                    <tr><td>Ibu Yunita Hapsari</td><td>12 minggu</td><td>05 Nov 2025</td><td>RT 07</td><td><span class="risiko-badge sedang">🟡 Sedang</span></td><td><button onclick="openDetailHamil(5)" style="background:var(--yellow);border:2px solid #ffd700;border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:800;color:#a07020">Detail</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style="font-size:12px;color:var(--text-light);margin-top:12px;text-align:center">Menampilkan 6 dari 38 ibu hamil terdaftar. Prioritaskan pemantauan risiko tinggi.</p>
+            </div>
+
+            <!-- Kader Tab: Daftarkan Anak -->
+            <div class="akun-tab-content" id="ktab-daftar-anak">
+              <div class="akun-section-title">➕ Daftarkan Anak Baru</div>
+              <div style="background:var(--green-pale);border-radius:var(--radius-sm);padding:24px;border:2px solid var(--green-light)">
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label">Nama Anak</label><input class="form-input" type="text" id="newAnakNama" placeholder="Nama lengkap anak"></div>
+                  <div class="form-group"><label class="form-label">Tanggal Lahir</label><input class="form-input" type="date" id="newAnakTgl"></div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label">Jenis Kelamin</label><select class="form-input" id="newAnakJk"><option>Laki-laki</option><option>Perempuan</option></select></div>
+                  <div class="form-group"><label class="form-label">RT/RW</label><input class="form-input" type="text" id="newAnakRt" placeholder="Contoh: RT 03 RW 07"></div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label">Nama Orang Tua</label><input class="form-input" type="text" id="newAnakOrtua" placeholder="Nama ibu/ayah"></div>
+                  <div class="form-group"><label class="form-label">No. HP Orang Tua</label><input class="form-input" type="text" id="newAnakHp" placeholder="0812-xxxx-xxxx"></div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label">Berat Badan (kg)</label><input class="form-input" type="number" id="newAnakBb" placeholder="Contoh: 8.5" step="0.1"></div>
+                  <div class="form-group"><label class="form-label">Tinggi Badan (cm)</label><input class="form-input" type="number" id="newAnakTb" placeholder="Contoh: 74"></div>
+                </div>
+                <div class="form-group"><label class="form-label">Catatan</label><textarea class="kontak-textarea" id="newAnakCatatan" placeholder="Catatan kondisi atau kebutuhan khusus..." style="min-height:80px"></textarea></div>
+                <button class="btn-primary" onclick="daftarAnakBaru()">✅ Daftarkan ke Sistem</button>
+              </div>
+            </div>
+
+            <!-- Kader Tab: Laporan -->
+            <div class="akun-tab-content" id="ktab-laporan">
+              <div class="akun-section-title">📊 Laporan Bulanan — April 2025</div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
+                <div style="background:var(--green-pale);border-radius:var(--radius-sm);padding:18px;text-align:center;border:2px solid var(--green-light)">
+                  <div style="font-size:28px;font-weight:900;color:var(--green-deep);font-family:'Playfair Display',serif">205</div>
+                  <div style="font-size:12px;color:var(--text-light)">Gizi Normal</div>
+                </div>
+                <div style="background:var(--yellow);border-radius:var(--radius-sm);padding:18px;text-align:center;border:2px solid #ffd700">
+                  <div style="font-size:24px;font-weight:900;color:#a07020;font-family:'Playfair Display',serif">25</div>
+                  <div style="font-size:12px;color:var(--text-light)">Gizi Kurang</div>
+                </div>
+                <div style="background:#ffe0e0;border-radius:var(--radius-sm);padding:18px;text-align:center;border:2px solid #ffc0c0">
+                  <div style="font-size:24px;font-weight:900;color:#c53030;font-family:'Playfair Display',serif">17</div>
+                  <div style="font-size:12px;color:var(--text-light)">Risiko Stunting</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <button class="btn-primary" onclick="showToast('📄','Export PDF','Mengunduh laporan PDF...')">📄 Export PDF</button>
+                <button class="btn-secondary" onclick="showToast('📊','Export Excel','Mengunduh laporan Excel...')">📊 Export Excel</button>
+              </div>
+            </div>
+
+            <!-- Kader Tab: Broadcast -->
+            <div class="akun-tab-content" id="ktab-broadcast">
+              <div class="akun-section-title">📢 Kirim Pengumuman ke Orang Tua</div>
+              <div style="background:var(--green-pale);border-radius:var(--radius-sm);padding:24px;border:2px solid var(--green-light)">
+                <div class="form-group"><label class="form-label">Jenis Pengumuman</label><select class="form-input"><option>📅 Pengingat Jadwal Posyandu</option><option>💉 Pengingat Imunisasi</option><option>⚠️ Notifikasi Penting</option><option>📢 Informasi Umum</option><option>🎉 Acara Khusus</option></select></div>
+                <div class="form-group"><label class="form-label">Sasaran Penerima</label><select class="form-input"><option>Semua Orang Tua (247 anak)</option><option>RT 01</option><option>RT 02</option><option>RT 03</option><option>RT 04</option><option>RT 05</option><option>Anak dengan Status Risiko Stunting</option><option>Ibu Hamil Terdaftar</option></select></div>
+                <div class="form-group"><label class="form-label">Judul Pengumuman</label><input class="form-input" type="text" id="bcJudul" placeholder="Contoh: Posyandu Balita Mei 2025"></div>
+                <div class="form-group"><label class="form-label">Isi Pesan</label><textarea class="kontak-textarea" id="bcPesan" placeholder="Tulis pesan pengumuman..." style="min-height:120px"></textarea></div>
+                <div style="display:flex;gap:12px;flex-wrap:wrap">
+                  <button class="btn-primary" onclick="kirimBroadcast()">📤 Kirim via WhatsApp</button>
+                  <button class="btn-secondary" onclick="showToast('👁️','Preview','Menampilkan preview pesan...')">👁️ Preview Pesan</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  MODALS                                -->
+<!-- ═══════════════════════════════════════ -->
+
+<!-- Edit Profil Modal -->
+<div class="modal-overlay" id="editProfilModal" onclick="closeModalOutside(event,'editProfilModal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('editProfilModal')">✕</button>
+    <div class="modal-title">✏️ Edit Profil</div>
+    <div class="modal-sub">Perbarui informasi pribadi Anda</div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Nama Lengkap</label><input class="form-input" type="text" id="editNama" value="Siti Rahayu"></div>
+      <div class="form-group"><label class="form-label">Nomor HP</label><input class="form-input" type="text" id="editHp" value="+62 812-9876-5432"></div>
+    </div>
+    <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" id="editEmail" value="siti.rahayu@email.com"></div>
+    <div class="form-group"><label class="form-label">Alamat (RT/RW)</label><input class="form-input" type="text" id="editAlamat" value="RT 05 RW 03, Rawabuntu"></div>
+    <div class="form-group"><label class="form-label">NIK (terenkripsi)</label><input class="form-input" type="text" id="editNik" value="36****1234"></div>
+    <div style="display:flex;gap:12px;margin-top:8px">
+      <button class="btn-primary" onclick="simpanProfil()">💾 Simpan Perubahan</button>
+      <button class="btn-secondary" onclick="closeModal('editProfilModal')">Batal</button>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Anak Modal -->
+<div class="modal-overlay" id="editAnakModal" onclick="closeModalOutside(event,'editAnakModal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('editAnakModal')">✕</button>
+    <div class="modal-title">✏️ Edit Data Anak</div>
+    <div class="modal-sub">Perbarui informasi data anak</div>
+    <input type="hidden" id="editAnakId">
+    <div class="form-group"><label class="form-label">Nama Lengkap Anak</label><input class="form-input" type="text" id="editAnakNama"></div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Tanggal Lahir</label><input class="form-input" type="date" id="editAnakTgl"></div>
+      <div class="form-group"><label class="form-label">Jenis Kelamin</label><select class="form-input" id="editAnakJk"><option>Laki-laki</option><option>Perempuan</option></select></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Berat Badan (kg)</label><input class="form-input" type="number" id="editAnakBb" placeholder="Contoh: 10.2"></div>
+      <div class="form-group"><label class="form-label">Tinggi Badan (cm)</label><input class="form-input" type="number" id="editAnakTbEdit" placeholder="Contoh: 82"></div>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:8px">
+      <button class="btn-primary" onclick="simpanEditAnak()">💾 Simpan</button>
+      <button style="background:#ffe0e0;color:#c53030;border:2px solid #ffc0c0;padding:12px 20px;border-radius:30px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer" onclick="hapusAnak()">🗑️ Hapus Anak</button>
+      <button class="btn-secondary" onclick="closeModal('editAnakModal')">Batal</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tambah Anak Modal -->
+<div class="modal-overlay" id="tambahAnakModal" onclick="closeModalOutside(event,'tambahAnakModal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('tambahAnakModal')">✕</button>
+    <div class="modal-title">➕ Daftarkan Anak Baru</div>
+    <div class="modal-sub">Isi data anak yang akan didaftarkan</div>
+    <div class="form-group"><label class="form-label">Nama Lengkap Anak</label><input class="form-input" type="text" id="taNewNama" placeholder="Nama lengkap anak"></div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Tanggal Lahir</label><input class="form-input" type="date" id="taNewTgl"></div>
+      <div class="form-group"><label class="form-label">Jenis Kelamin</label><select class="form-input" id="taNewJk"><option>Laki-laki</option><option>Perempuan</option></select></div>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:8px">
+      <button class="btn-primary" onclick="simpanTambahAnak()">✅ Daftarkan</button>
+      <button class="btn-secondary" onclick="closeModal('tambahAnakModal')">Batal</button>
+    </div>
+  </div>
+</div>
+
+<!-- E-KMS Modal (Orang Tua) -->
+<div class="modal-overlay" id="ekmsModal" onclick="closeModalOutside(event,'ekmsModal')">
+  <div class="modal-box modal-box-wide">
+    <button class="modal-close" onclick="closeModal('ekmsModal')">✕</button>
+    <div class="modal-title">📋 E-KMS Digital</div>
+    <div class="modal-sub">Kartu Menuju Sehat Digital — Grafik Pertumbuhan WHO</div>
+    <div style="background:var(--green-pale);border-radius:var(--radius-sm);padding:16px;margin-bottom:16px;border:2px solid var(--green-light)">
+      <div style="font-size:16px;font-weight:900;color:var(--green-deep);margin-bottom:4px" id="ekmsModalNama">—</div>
+      <div style="font-size:12px;color:var(--text-light)">Posyandu Vinca Rawa Buntu · RW 03</div>
+    </div>
+    <div class="kms-chart-wrap">
+      <div class="kms-chart-title">📈 Grafik Berat Badan vs Usia (WHO Standard)</div>
+      <div style="height:120px">
+        <svg width="100%" height="100%" viewBox="0 0 280 100" preserveAspectRatio="none" id="ekmsChartSvg"></svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text-light);margin-top:6px;padding:0 20px">
+        <span>-5 bln</span><span>-4 bln</span><span>-3 bln</span><span>-2 bln</span><span>-1 bln</span><span>Terakhir</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px">
+      <div class="kms-status"><div class="val" id="ekmsModalBB">—</div><div class="lbl">BB (kg)</div></div>
+      <div class="kms-status"><div class="val" id="ekmsModalTB">—</div><div class="lbl">TB (cm)</div></div>
+      <div class="kms-status"><div class="val" id="ekmsModalLK">—</div><div class="lbl">LK (cm)</div></div>
+      <div class="kms-status"><div class="val" id="ekmsModalUsia">—</div><div class="lbl">Usia</div></div>
+    </div>
+    <div style="margin-top:20px;background:var(--mint);border-radius:10px;padding:14px;border:2px solid var(--green-light)">
+      <div style="font-weight:800;font-size:13px;color:var(--green-deep);margin-bottom:6px">📊 Legenda Garis WHO</div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--text-mid)">
+        <span>🟢 Garis atas — Normal</span>
+        <span>🟡 Garis tengah — Perhatian</span>
+        <span>🔴 Garis bawah — Risiko</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:16px">
+      <button class="btn-primary" onclick="showToast('📄','Export','Mengunduh E-KMS PDF...')">📄 Download PDF</button>
+      <button class="btn-secondary" onclick="closeModal('ekmsModal')">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Detail Anak (Kader) -->
+<div class="modal-overlay" id="kaderDetailModal" onclick="closeModalOutside(event,'kaderDetailModal')">
+  <div class="modal-box modal-box-wide">
+    <button class="modal-close" onclick="closeModal('kaderDetailModal')">✕</button>
+    <div class="modal-title">📋 Detail Anak</div>
+    <div class="modal-sub" id="kaderDetailNama">—</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
+      <div class="akun-field"><div class="akun-field-label">USIA</div><div class="akun-field-val" id="kaderDetailUsia">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">BB</div><div class="akun-field-val" id="kaderDetailBB">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">TB</div><div class="akun-field-val" id="kaderDetailTB">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">LK (cm)</div><div class="akun-field-val" id="kaderDetailLK">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">RT</div><div class="akun-field-val" id="kaderDetailRT">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">ORANG TUA</div><div class="akun-field-val" id="kaderDetailOrtu">—</div></div>
+    </div>
+    <div style="background:var(--green-pale);border-radius:10px;padding:14px;border:2px solid var(--green-light);margin-bottom:16px">
+      <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin-bottom:4px">STATUS GIZI</div>
+      <div style="font-size:16px;font-weight:900" id="kaderDetailStatus">—</div>
+      <div style="font-size:12px;color:var(--text-mid);margin-top:6px">Kunjungan Terakhir: <strong id="kaderDetailKunjungan">—</strong></div>
+    </div>
+    <div style="background:var(--yellow);border-radius:10px;padding:14px;border:2px solid #ffd700;margin-bottom:16px">
+      <div style="font-size:12px;font-weight:700;color:#a07020;margin-bottom:4px">📝 CATATAN KADER</div>
+      <div style="font-size:13px;color:var(--text-dark)" id="kaderDetailCatatan">—</div>
+    </div>
+    <div class="kms-chart-wrap">
+      <div class="kms-chart-title">📈 Tren Berat Badan (6 Bulan Terakhir)</div>
+      <div style="height:110px">
+        <svg width="100%" height="100%" viewBox="0 0 280 100" preserveAspectRatio="none" id="kaderMiniChart"></svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text-light);margin-top:4px;padding:0 20px">
+        <span>-5 bln</span><span>-4 bln</span><span>-3 bln</span><span>-2 bln</span><span>-1 bln</span><span>Terakhir</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:16px">
+      <button class="btn-primary" onclick="showToast('📋','Monitoring','Memulai pemantauan intensif...');closeModal('kaderDetailModal')">📋 Tambah Catatan</button>
+      <button class="btn-secondary" onclick="closeModal('kaderDetailModal')">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Detail Ibu Hamil (Kader) -->
+<div class="modal-overlay" id="hamilDetailModal" onclick="closeModalOutside(event,'hamilDetailModal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('hamilDetailModal')">✕</button>
+    <div class="modal-title">🤰 Detail Ibu Hamil</div>
+    <div class="modal-sub" id="hamilDetailNama">—</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+      <div class="akun-field"><div class="akun-field-label">USIA KEHAMILAN</div><div class="akun-field-val" id="hamilDetailUsia">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">TRIMESTER</div><div class="akun-field-val" id="hamilDetailTrimester">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">TAKSIRAN PERSALINAN</div><div class="akun-field-val" id="hamilDetailTaksiran">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">STATUS RISIKO</div><div class="akun-field-val" id="hamilDetailRisiko">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">RT/RW</div><div class="akun-field-val" id="hamilDetailRT">—</div></div>
+      <div class="akun-field"><div class="akun-field-label">NO. HP</div><div class="akun-field-val" id="hamilDetailHP">—</div></div>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:8px">
+      <button class="btn-primary" onclick="showToast('📱','WhatsApp','Membuka chat WhatsApp...');closeModal('hamilDetailModal')">📱 Hubungi via WA</button>
+      <button class="btn-secondary" onclick="closeModal('hamilDetailModal')">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/628123456789" class="wa-float" title="Chat via WhatsApp" id="waFloat">
+  <div class="wa-pulse"></div>💬
+</a>
+
+<!-- BACK TO TOP -->
+<div class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

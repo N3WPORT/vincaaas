@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Posyandu Vinca Rawabuntu - Digital Health Monitoring</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary-container": "#ffede6",
+                        "on-primary-fixed": "#00174b",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-container-highest": "#e1e2ed",
+                        "inverse-primary": "#b4c5ff",
+                        "secondary": "#006c49",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary-container": "#6cf8bb",
+                        "secondary-fixed-dim": "#4edea3",
+                        "primary": "#004ac6",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-secondary-fixed-variant": "#005236",
+                        "surface-tint": "#0053db",
+                        "inverse-on-surface": "#f0f0fb",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#ededf9",
+                        "on-secondary-container": "#00714d",
+                        "surface-dim": "#d9d9e5",
+                        "primary-container": "#2563eb",
+                        "outline-variant": "#c3c6d7",
+                        "surface-container-high": "#e7e7f3",
+                        "on-secondary-fixed": "#002113",
+                        "tertiary": "#943700",
+                        "on-surface-variant": "#434655",
+                        "tertiary-container": "#bc4800",
+                        "surface": "#faf8ff",
+                        "error-container": "#ffdad6",
+                        "on-background": "#191b23",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191b23",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f3fe",
+                        "surface-variant": "#e1e2ed",
+                        "on-primary-container": "#eeefff",
+                        "background": "#faf8ff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "inverse-surface": "#2e3039",
+                        "on-error-container": "#93000a",
+                        "outline": "#737686"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-md": "24px",
+                        "stack-sm": "12px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-xs": ["Inter"],
+                        "display-lg": ["Atkinson Hyperlegible Next"],
+                        "title-md": ["Inter"],
+                        "headline-lg-mobile": ["Atkinson Hyperlegible Next"],
+                        "headline-lg": ["Atkinson Hyperlegible Next"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-xs": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-elevation-1 {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #faf8ff 0%, #f3f3fe 100%);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface shadow-sm fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-lg text-primary">Posyandu Vinca</div>
+<div class="hidden lg:flex gap-gutter items-center">
+<a class="text-primary border-b-2 border-primary font-bold font-body-lg text-body-lg px-2 py-1" href="#beranda">Beranda</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#layanan">Layanan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#jadwal">Jadwal</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#informasi">Informasi</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#kegiatan">Kegiatan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#tentang-kami">Tentang Kami</a>
+</div>
+<div class="flex items-center gap-base">
+<button class="px-6 py-2 rounded-full font-bold bg-primary text-on-primary hover:opacity-80 active:scale-95 transition-all">Login</button>
+</div>
+</nav>
+</header>
+<main class="mt-20">
+<!-- 1. Hero Section (Beranda) -->
+<section class="hero-gradient py-stack-lg px-margin-desktop" id="beranda">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="flex-1 space-y-stack-md">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Digitalisasi Kesehatan Komunitas</span>
+<h1 class="font-display-lg text-display-lg text-on-background max-w-xl">Monitor Tumbuh Kembang Anak dengan Presisi Digital</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Layanan kesehatan terpadu Posyandu Vinca kini hadir lebih dekat. Pantau KMS, jadwal imunisasi, dan riwayat kesehatan anak Anda dalam satu platform yang aman dan terpercaya.
+                    </p>
+<div class="flex flex-wrap gap-base pt-4">
+<button class="px-8 py-3 rounded-xl bg-primary text-on-primary font-bold hover:opacity-90 active:scale-95 transition-all">Daftar Sekarang</button>
+<button class="px-8 py-3 rounded-xl border-1.5 border-primary text-primary font-bold bg-white hover:bg-surface-container-low transition-all border-[1.5px]">Pelajari Lebih Lanjut</button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-[4/3] rounded-3xl overflow-hidden tonal-elevation-1">
+<img alt="A warm medical scene with a volunteer and child" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5HzjKSdltw-NUydCwjQYCO3dVM9omnhy42vlGgNZpcYdjWttNFUe4WMH42UVdMpZZnvu13SuYxzHaHf6tY5XRjSBiTzHpzR_xIvSw2S9wDj-LxrmiGir-XanbBSFqxB4P-8PAkbNlWfWIpTXz9ox4roqfzSP2B2FJxf1Mkp-ICmyHdhEqh00PqbVT9hDDng521RZwPV6XMjUCbQKzOrXGyF8RKQAu68_EHwfhLxQwqm7cr5amirz2Pk2lK2VmHtkSB_fMCQgqk1K1"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl tonal-elevation-1 flex items-center gap-base animate-bounce">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Data Terverifikasi Medis</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Layanan (Services) -->
+<section class="py-stack-lg bg-surface" id="layanan">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-display-lg text-headline-lg text-on-background">Layanan Kesehatan Kami</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Kami menyediakan berbagai layanan kesehatan dasar yang terintegrasi untuk mendukung pertumbuhan buah hati Anda secara optimal.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-stack-md bg-surface-container-low rounded-2xl tonal-elevation-1 text-center space-y-base border border-outline-variant/30 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-primary text-[32px]">analytics</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-background">KMS Digital</h3>
+<p class="font-body-md text-on-surface-variant">Pantau grafik pertumbuhan berat dan tinggi badan anak secara real-time melalui sistem digital terpadu.</p>
+</div>
+<div class="p-stack-md bg-surface-container-low rounded-2xl tonal-elevation-1 text-center space-y-base border border-outline-variant/30 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-on-secondary-container text-[32px]">vaccines</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-background">Imunisasi</h3>
+<p class="font-body-md text-on-surface-variant">Layanan imunisasi dasar lengkap dengan pengingat otomatis untuk memastikan jadwal tidak terlewat.</p>
+</div>
+<div class="p-stack-md bg-surface-container-low rounded-2xl tonal-elevation-1 text-center space-y-base border border-outline-variant/30 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-tertiary text-[32px]">monitor_heart</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-background">Cek Kesehatan</h3>
+<p class="font-body-md text-on-surface-variant">Pemeriksaan kesehatan rutin bulanan oleh kader terlatih untuk deteksi dini masalah kesehatan.</p>
+</div>
+</div>
+<!-- Simple Stats within Layanan to show impact -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-12">
+<div class="flex flex-col items-center p-6 rounded-2xl bg-surface-container-high/50">
+<div class="font-display-lg text-headline-lg text-primary">200+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Anak Terdaftar</div>
+</div>
+<div class="flex flex-col items-center p-6 rounded-2xl bg-surface-container-high/50">
+<div class="font-display-lg text-headline-lg text-on-background">15</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Kader Aktif</div>
+</div>
+<div class="flex flex-col items-center p-6 rounded-2xl bg-surface-container-high/50">
+<div class="font-display-lg text-headline-lg text-on-background">Bulanan</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Layanan Rutin</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Jadwal (Upcoming Schedule) -->
+<section class="py-stack-lg bg-surface-bright border-y border-outline-variant/20" id="jadwal">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-stack-md">
+<div>
+<h2 class="font-display-lg text-headline-lg text-on-background">Jadwal Mendatang</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Pastikan kehadiran Anda untuk kesehatan buah hati.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-bold">
+                        Lihat Kalender Lengkap <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-stack-sm">
+<div class="group bg-white p-6 rounded-2xl tonal-elevation-1 flex flex-col md:flex-row items-center gap-stack-md border border-outline-variant/20 hover:border-primary/30 transition-all cursor-pointer">
+<div class="w-20 h-20 bg-primary-container rounded-xl flex flex-col items-center justify-center text-on-primary">
+<span class="font-label-sm text-label-sm">NOV</span>
+<span class="font-display-lg text-headline-lg">12</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h3 class="font-title-md text-title-md text-on-background">Imunisasi Dasar Lengkap</h3>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">schedule</span> 08:00 - 11:00 WIB</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> Balai Warga RW 07</span>
+</div>
+</div>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface group-hover:bg-primary group-hover:text-on-primary transition-colors">Ingatkan Saya</button>
+</div>
+<div class="group bg-white p-6 rounded-2xl tonal-elevation-1 flex flex-col md:flex-row items-center gap-stack-md border border-outline-variant/20 hover:border-primary/30 transition-all cursor-pointer">
+<div class="w-20 h-20 bg-secondary-container rounded-xl flex flex-col items-center justify-center text-on-secondary-container">
+<span class="font-label-sm text-label-sm">NOV</span>
+<span class="font-display-lg text-headline-lg">15</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h3 class="font-title-md text-title-md text-on-background">Posyandu Balita &amp; Penimbangan</h3>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">schedule</span> 09:00 - 12:00 WIB</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> Gedung Vinca</span>
+</div>
+</div>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface group-hover:bg-primary group-hover:text-on-primary transition-colors">Ingatkan Saya</button>
+</div>
+<div class="group bg-white p-6 rounded-2xl tonal-elevation-1 flex flex-col md:flex-row items-center gap-stack-md border border-outline-variant/20 hover:border-primary/30 transition-all cursor-pointer">
+<div class="w-20 h-20 bg-tertiary-fixed rounded-xl flex flex-col items-center justify-center text-tertiary">
+<span class="font-label-sm text-label-sm">NOV</span>
+<span class="font-display-lg text-headline-lg">20</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h3 class="font-title-md text-title-md text-on-background">Kelas Edukasi Ibu Hamil</h3>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">schedule</span> 13:00 - 15:00 WIB</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> Ruang Serbaguna Vinca</span>
+</div>
+</div>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface group-hover:bg-primary group-hover:text-on-primary transition-colors">Ingatkan Saya</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Informasi (Education & Tips) -->
+<section class="py-stack-lg bg-surface" id="informasi">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-display-lg text-headline-lg text-on-background mb-stack-md text-center">Edukasi &amp; Tips Kesehatan</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Article -->
+<div class="md:col-span-7 bg-white rounded-3xl overflow-hidden tonal-elevation-1 flex flex-col group border border-outline-variant/20">
+<div class="relative h-64 md:h-full">
+<img alt="Healthy toddler meals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4zswep6bGxaNAFTkW5-eGfZlsK1xvbBXYxcaDVqISnoKHo342JyX6cV-MsJO2lXxG9_r6snyfOfyIvVxD5zMOLfHzH0GQ-mOpMYsBWxxhH_fD0HL9BVN1xqyPVPc18RyDd5Cav7oHrL-rNUbyekLzb0gr01dczYX-tle2C3NWG2vkPR5YI_9hKl4eGcBWYYotm7xnk-CE6q4117RfD9NLel0v3odNLeoH03Rleed_5NG4pXYMgrXYCJP0Kc3EwVo3P8STbl_zO129"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-3 py-1 rounded-full w-fit mb-4">Nutrisi</span>
+<h3 class="font-display-lg text-headline-lg text-white mb-2">Panduan Lengkap MPASI: Memulai Langkah Sehat</h3>
+<a class="text-white font-bold flex items-center gap-2 hover:translate-x-2 transition-transform" href="#">Baca Selengkapnya <span class="material-symbols-outlined">arrow_right_alt</span></a>
+</div>
+</div>
+</div>
+<!-- Side Articles -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<div class="bg-white rounded-3xl p-6 tonal-elevation-1 flex gap-stack-sm border border-outline-variant/20 group cursor-pointer">
+<div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0">
+<img alt="Vitamin A supplements" class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlKN846S-SwHqh_x0JNCfzflOtlw3PUhll1aZrukcTFpkXpw8ARH1fRkNpPsQt9wuymbjctiQy6QFbKoT04SuKDJhrXAFCbs1ydfG3yACCQMZub6EY-EGgLFED8MtM0KzD5DfZQh03THygvxCmZasjLSCdOrf8__hVubfowQceAEvu4RnSpSyKRR5yFZrU4RuxTqw3L9hjIrvyj04MOa8vvJeAvl9IQMRvP4Ap8JowSfPe1wDM46QmAH9N84p5cqYLwEWTjG1qAcRB"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-tertiary font-label-sm text-label-sm uppercase">Suplemen</span>
+<h4 class="font-title-md text-title-md text-on-background mt-1 line-clamp-2">Pentingnya Vitamin A bagi Pertumbuhan Mata</h4>
+<span class="text-primary font-bold text-label-sm mt-2">Selengkapnya</span>
+</div>
+</div>
+<div class="bg-white rounded-3xl p-6 tonal-elevation-1 flex gap-stack-sm border border-outline-variant/20 group cursor-pointer">
+<div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0">
+<img alt="Hand washing ritual" class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMPMqRnPB6kAW5ka5E0JjAt3JPzIps5DUo4eL7sW7oi8I37KPNkwGmXLCYiei5nLbZFSXH424cS2pEUR2rzoOJQKy_JD2f40iXsynkEd3-3QGpNeIXYK9US5TJFWq-UV6YaUFx9kx0Hcd87foBT5278ALMLFkII22Q2-2js3pcLyYgUahu7u2cz2YDyoC7-YoCgg5P_Pf86ydLPtPCNLZt0KgL-fH7suFAd41IsT7ozo1IVH7uuf8U0Jz-aCy40hNt437OL7L4wrNQ"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-secondary font-label-sm text-label-sm uppercase">Sanitasi</span>
+<h4 class="font-title-md text-title-md text-on-background mt-1 line-clamp-2">Cegah Stunting dengan Pola Hidup Bersih</h4>
+<span class="text-primary font-bold text-label-sm mt-2">Selengkapnya</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Kegiatan (Gallery) -->
+<section class="py-stack-lg bg-surface-container-lowest" id="kegiatan">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-stack-md">
+<h2 class="font-display-lg text-headline-lg text-on-background">Galeri Kegiatan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Momen kebersamaan dalam membangun generasi sehat.</p>
+</div>
+<div class="columns-1 md:columns-2 lg:columns-3 gap-base space-y-base">
+<div class="break-inside-avoid rounded-2xl overflow-hidden group relative">
+<img alt="Health volunteers with children" class="w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMjlPZv9xl0Hfb65zn3gyLffPpHCv7CpK5cTce68d4AszuHo4i1SoPDj4m1xnoRB9MwIw3JEKPokAKAu7WFKWx1KpMpzlOaZN_ToJy_7jIsvwTdjfRTnh6PqOYIamdDd5r7se2PYa797pR6EY38FG4jhiwb1YHHb3gNLfYj0Tt8VNhgud1hn3jA-asIBDKQutu_ts316yxR9Jdloxft8K6hLGtQz3tbFlXwC8aeIftRAZlkgLmS_Wf4Kv2WorUeitDoFGrvq5CPHOk"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white font-label-sm text-label-sm">Penimbangan Bulanan - Okt 2023</span>
+</div>
+</div>
+<div class="break-inside-avoid rounded-2xl overflow-hidden group relative">
+<img alt="Digital health dashboard" class="w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANwDMIoLdcihhQnZ4foOED25z9COQPikrYUBJC59GznPnlGMT_zChNvGhDanCpNhGOejMwspPig_ZMC36myOm2BtiyZp5gSFqsB7LUtyj5e0jQCQ0yGccXfXm3sYXpnjQM4K1x-oIPqCihIr_0wzWbP3NKxr95DBP8rszZn8bJOeMkr8pAPOF03kFZ_CzN6GB62BlF2Iu86a0ORWwD4vWWokYoqvncTv61Tgu4jXblGjsKBDBPCASVX6bLWgXBH-CtnrJjzDTBh312"/>
+</div>
+<div class="break-inside-avoid rounded-2xl overflow-hidden group relative">
+<img alt="Health center entrance" class="w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm6qBzUu1upq9WA-0ddiozJ08VJh5xghojSp2lkFwDqZCHuj7qXSsltxQj1apZ5pf4MwY5r6NiRjXcrSgcCXch4QXcUyUTp-R53pQQcpAXXJsqGPwHUo5GAfd3ZZJLQBNJXoTAKtGTvWl9fiLoImffCmvjNwvZV6hqv637HZTHo7idlRvW893xB7skK8QgxCnGpD0VwMVlpepJ2aQG_f9dHG96oqT6GgTTzI5ZRmwLReLNp8iuouOCbheYgu7BNuFWK0DPJTGJ0cRc"/>
+</div>
+<div class="break-inside-avoid rounded-2xl overflow-hidden group relative">
+<img alt="Smiling volunteers" class="w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC62RdJJCaAvmysRNK514SQ6iYABbdDV3pPh4Yfp28EsyI1skcBdiYRkPWcaCXmAu46QNhw2a7nLIKN-yYeZ0xAkwRs384wfjtyfFibUa9pZh8m7famEaS8UPbUa44MOvISeeVhDjnVuTKRHzUo2LiaY3KELaTuoy42U32d1-jyUNRpJPOvLriDJCzxdHk51eF0TH4kqtxJKK7M_U1PBxe0cRraYDNBFHH598qCNC8nUqunc3ZquWp70rTestBSI3v7M7hAd14dJ21v"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Tentang Kami (About Us) -->
+<section class="py-stack-lg bg-surface-bright" id="tentang-kami">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="flex-1 space-y-stack-md">
+<h2 class="font-display-lg text-headline-lg text-on-background">Tentang Posyandu Vinca</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Berdiri sejak tahun 2010 di jantung Rawabuntu, Posyandu Vinca bermula dari inisiatif warga untuk menciptakan lingkungan yang sehat bagi tumbuh kembang anak. Kami percaya bahwa kesehatan adalah fondasi masa depan bangsa.
+                        </p>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="shrink-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+</div>
+<div>
+<h4 class="font-title-md text-body-md font-bold text-on-background">Misi Kami</h4>
+<p class="text-on-surface-variant font-body-md">Menyediakan layanan kesehatan dasar yang inklusif, akurat, dan berbasis data digital untuk setiap keluarga di Rawabuntu.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]">favorite</span>
+</div>
+<div>
+<h4 class="font-title-md text-body-md font-bold text-on-background">Komitmen Komunitas</h4>
+<p class="text-on-surface-variant font-body-md">Memberdayakan kader lokal dan orang tua melalui edukasi berkelanjutan untuk menekan angka stunting secara kolektif.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-2 gap-4">
+<img alt="Volunteers in discussion" class="w-full h-48 object-cover rounded-2xl shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC62RdJJCaAvmysRNK514SQ6iYABbdDV3pPh4Yfp28EsyI1skcBdiYRkPWcaCXmAu46QNhw2a7nLIKN-yYeZ0xAkwRs384wfjtyfFibUa9pZh8m7famEaS8UPbUa44MOvISeeVhDjnVuTKRHzUo2LiaY3KELaTuoy42U32d1-jyUNRpJPOvLriDJCzxdHk51eF0TH4kqtxJKK7M_U1PBxe0cRraYDNBFHH598qCNC8nUqunc3ZquWp70rTestBSI3v7M7hAd14dJ21v"/>
+<img alt="Community hall" class="w-full h-48 object-cover rounded-2xl shadow-sm mt-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm6qBzUu1upq9WA-0ddiozJ08VJh5xghojSp2lkFwDqZCHuj7qXSsltxQj1apZ5pf4MwY5r6NiRjXcrSgcCXch4QXcUyUTp-R53pQQcpAXXJsqGPwHUo5GAfd3ZZJLQBNJXoTAKtGTvWl9fiLoImffCmvjNwvZV6hqv637HZTHo7idlRvW893xB7skK8QgxCnGpD0VwMVlpepJ2aQG_f9dHG96oqT6GgTTzI5ZRmwLReLNp8iuouOCbheYgu7BNuFWK0DPJTGJ0cRc"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg mb-stack-lg">
+<div class="col-span-1 md:col-span-2">
+<div class="font-display-lg text-title-md text-on-background mb-4">Posyandu Vinca Rawabuntu</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+                        Berdedikasi untuk meningkatkan kualitas kesehatan ibu dan anak di wilayah Rawabuntu melalui layanan terpadu dan teknologi digital.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">camera_alt</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-background mb-4">Kontak Kami</h4>
+<ul class="space-y-base text-on-surface-variant font-body-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+                            Jl. Rawabuntu No. 12, Serpong, Tangerang Selatan
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">call</span>
+                            (021) 555-0123
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">chat</span>
+                            0812-3456-7890
+                        </li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-background mb-4">Lokasi</h4>
+<div class="w-full h-32 rounded-xl overflow-hidden grayscale contrast-125 hover:grayscale-0 transition-all">
+<img alt="Location Map" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8veG7Few3pMEcEHZ7IgwIYUST-ieBySJbRDvJGufAyzEmJaFX30fyc-zzI8OgcIHWGBz6TjsR8HArWXe6XEf6m8jWfXuhcQ2JIR3XDtWrWpiOixQBdM8eZQfZFDEguuRWQHtYMcswQAfzLAGl7JpRUmoRl8UuuxfPfYw4aGpH5g25C3JgyM-MpeC7a-jfihRPfqYOSedUeA7WgfFXaOJskIBrVoLtKrSb6-2creRrg9VNiwQ5r8_BMNt2ELSZbVk5gcKlDudUAUgd"/>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-md flex flex-col md:flex-row justify-between items-center gap-base">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Posyandu Vinca Rawabuntu. All rights reserved.</p>
+<div class="flex gap-stack-md font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="hover:text-primary transition-colors" href="#">Syarat Layanan</a>
+<a class="hover:text-primary transition-colors" href="#">Bantuan</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
